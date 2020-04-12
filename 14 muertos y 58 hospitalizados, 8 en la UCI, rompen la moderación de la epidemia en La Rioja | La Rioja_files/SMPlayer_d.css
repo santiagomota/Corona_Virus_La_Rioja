@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+.SMPlayer {
+    width: 100% !important;
+    height: 100% !important;
+    float: none;
+    top: 0px;
+    position: absolute;
+    display: block;
+    background-color:transparent;
+    z-index: 2;
+}
+
+.SMPlayer_vpaid {
+    width: 100%;
+    height: 100%;
+    float: none;
+    top: 0px;
+    position: absolute;
+    overflow: hidden;
+    z-index: 3;
+}
+
+.SMPlayer_blocker {
+    width: 100% !important;
+    height: 100% !important;
+    float: none;
+    top: 0px;
+    position: absolute;
+    cursor: pointer;
+    z-index: 4;
+}
+
+.SMPlayer_black {
+    width: 100% !important;
+    height: 100% !important;
+    display:none;
+    z-index: 40;
+    background-color: transparent;
+}
+
+.SMPlayer_remaining {
+    border-radius: 100%;
+    width: 10%;
+    height: auto;
+    min-width: 20px;
+    min-height: 20px;
+    max-width: 40px;
+    max-height: 40px;
+    /*top:87%;*/
+    bottom: 3px;
+    left: 1.2%;
+    float:none;
+    position:absolute;
+    display: none;
+    z-index: 5;
+}
+
+.SMPlayer_remaining > svg {
+    fill: rgb(0, 0, 0);
+    width: 100%;
+}
+
+.SMPlayer_Currenttime {
+    font-family: 'Lato', sans-serif;
+    display:block
+}
+
+.SMPlayer_Skip {
+    width: 16%;
+    height: 10%;
+    min-width: 42px;
+    min-height: 20px;
+    max-width: 85px;
+    max-height: 40px;
+    top: 5px;
+    left: 1%;
+    position:absolute;
+    display:none;
+    float:none;
+    cursor:pointer;
+    background-image: url('https://static.sunmedia.tv/SMSdk/ico/skip.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 7;
+}
+
+.SMPlayer_playBtn {
+    background-image: url('https://static.sunmedia.tv/SMSdk/ico/play.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 11%;
+    height: 11%;
+    min-width: 20px;
+    min-height: 20px;
+    max-width: 40px;
+    max-height: 40px;
+    bottom: 6px;
+    transform:translateX(-50%);
+    left: 50%;
+    position: absolute;
+    float: none;
+    z-Index: 20;
+    display: none;
+    cursor: pointer;
+}
+
+.SMPlayer_svg {
+    position:absolute;
+    float: none;
+    width: 100%;
+    height: 100%;
+    top:0px;
+    left:0px;
+}
+.SMPlayer_bar, .SMPlayer_bar_bg {
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    stroke-dasharray:500;
+    stroke-width: 10%;
+    transform: rotateZ(-90deg);
+    transform-origin: center;
+    transition: all 1s ease;
+}
+
+.SMPlayer_label {
+    width: 10%;
+    height: 10%;
+    min-width: 20px;
+    min-height: 20px;
+    max-width: 40px;
+    max-height: 40px;
+    top: 5px;
+    right: 1%;
+    position: absolute;
+    display: none;
+    float: none;
+    cursor: pointer;
+    background-image: url('https://static.sunmedia.tv/SMSdk/ico/adlabel.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 8;
+}
+
+.SMPlayer_Audio {
+    width: 10%;
+    height: 10%;
+    min-width: 20px;
+    min-height: 20px;
+    max-width: 40px;
+    max-height: 40px;
+    right: 1%;
+    bottom: 6px;
+    position:absolute;
+    display: none;
+    float:none;
+    cursor:pointer;
+    background-image: url('https://static.sunmedia.tv/SMSdk/ico/sound-on.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 8;
+}
+
+.SMPlayer_Resize {
+    width: 10%;
+    height: 10%;
+    min-width: 20px;
+    min-height: 20px;
+    max-width: 40px;
+    max-height: 40px;
+    right: 11%;
+    bottom: 7px;
+    position:absolute;
+    display: none;
+    float:none;
+    cursor:pointer;
+    background-image: url('https://static.sunmedia.tv/SMSdk/ico/fullscreen-on.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 9;
+}
+
+.closeButton{
+    z-Index:50;
+    display:none;
+    cursor:pointer;
+    width:26px;
+    height:26px;
+    background-image:url('https://static.sunmedia.tv/SMSdk/ico/close.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    position:absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.fullscreenOn{
+    width: 100% !important;
+    height: 100% !important;
+    float: none;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    display: block;
+}
+
+/*****
+ Banner
+ */
+
+.SMAuxBanner {
+    z-index:10;
+    background-color:rgb(245, 245, 245);
+    display:none;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0px;
+    left:0px;
+}
+
+.SMAuxBanner .replay {
+    width:23%;
+    height:30%;
+    top:35%;
+    left:38.5%;
+    position:absolute;
+    float:none;
+    background-image: url('https://static.sunmedia.tv/SMSdk/ico/replay.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    z-index: 7;
+    opacity:1
+}

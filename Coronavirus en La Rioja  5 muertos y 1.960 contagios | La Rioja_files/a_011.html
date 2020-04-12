@@ -1,0 +1,34 @@
+
+raConsentString = "";
+raReferrerDomain = "";
+
+if(raConsentString == ""){
+	if(typeof raEuconsent != 'undefined' && raEuconsent != ''){
+		raConsentString = raEuconsent;
+	}
+}
+
+if(raConsentString != ''){
+	raHasConsent = "1";
+}else{
+	raHasConsent = "0";
+}
+
+
+if(raReferrerDomain == ""){
+	if(typeof raReferrer != 'undefined' && raReferrer != ''){
+		raReferrerDomain = raReferrer;
+	}
+}
+
+
+raIfSync = document.createElement('iframe');
+raIfSync.src = "https://sync.richaudience.com/dcf3528a0b8aa83634892d50e91c306e/?ord=796077&pubconsent="+raConsentString+"&euconsent="+raConsentString+"&hasConsent="+raHasConsent;
+raIfSync.id = "raiCsync";
+raIfSync.setAttribute('scrolling','no');
+raIfSync.style.width = "0";
+raIfSync.style.height = "0";
+raIfSync.style.cssFloat = "left";
+raIfSync.style.borderStyle="none";
+raIfSync.style.frameBorder = 0;
+document.body.appendChild(raIfSync);
