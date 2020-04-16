@@ -104,14 +104,15 @@ $(document).ready(function () {
     $(".weblink-category img, .weblinks img").addClass("img-responsive img-rounded");
 
     /* Cálculo de altura automática de iframes */
-    if ($("iframe").length) {
+
+	if ($(".iframe iframe").length) {
         $.ajax({
             url: "/web_lariojaorg/vendor/iframe-resizer/js/iframeResizer.min.js",
             dataType: "script",
             async: true,
             global: false,
             success: function () {
-                $("iframe").iFrameResize({
+                $(".iframe iframe").iFrameResize({
                     initCallback: function (iframe) {
                         $(iframe).attr("scrolling", "no");
                     }

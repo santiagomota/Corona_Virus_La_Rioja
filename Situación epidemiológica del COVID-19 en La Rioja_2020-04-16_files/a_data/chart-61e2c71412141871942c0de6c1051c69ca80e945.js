@@ -1,6 +1,6 @@
 /*
  * datawrapper / chart 
- * generated on 2020-04-16T11:48:41+00:00
+ * generated on 2020-04-16T17:48:49+00:00
  */
 (function(){var chart,reloadTimer;function renderChart(){if(__dw.vis&&!__dw.vis.supportsSmartRendering()){__dw.vis.reset();}
 var $chart=$('#chart');var belowChartHeight=$('.footer-left').height()+$('.footer-right').height()+$('.dw-chart-notes').height();if(belowChartHeight>0){$('.dw-chart-body').addClass('content-below-chart');}else{$('.dw-chart-body').removeClass('content-below-chart');}
