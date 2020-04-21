@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html><head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Fallecidos por días</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.95, maximum-scale=0.95, user-scalable=0">
+    <script type="text/javascript">
+    if (window.parent && window.parent.postMessage) {
+        window.parent.postMessage('datawrapper:vis:reload', '*');
+    }
+    </script>
+            <!--[if lt IE 9]>
+    <script src="/static/vendor/json-js/json2.min.js"></script>
+    <script type="text/javascript">
+        window.__ltie9 = true;
+    </script>
+    <![endif]-->
+    
+        <link rel="alternate" type="application/json+oembed" href="https://app.datawrapper.de/api/plugin/oembed?url=%2F%2Fdatawrapper.dwcdn.net%2FLdknE%2F23%2F&amp;format=json" title="Fallecidos por días">
+
+
+    <script type="text/javascript" charset="utf-8">
+    window.__locale = 'es-ES';
+    </script>
+
+      <script type="text/javascript" charset="utf-8" src="a_data_007/underscore-min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="a_data_007/globalize_002.js"></script>
+        <script type="text/javascript" charset="utf-8" src="a_data_007/globalize.js"></script>
+        <script type="text/javascript" charset="utf-8" src="a_data_007/jquery.js"></script>
+        <script type="text/javascript" charset="utf-8" src="a_data_007/column-chart-d6a77fbdf4fcdfc81bf5c8698a8b6ce6.js"></script>
+        <script type="text/javascript" charset="utf-8" src="a_data_007/chart-61e2c71412141871942c0de6c1051c69ca80e945.js"></script>
+  
+    <script type="text/javascript">
+        (function() {
+            dw.theme.register('datawrapper-extended-charset', {"typography":{"chart":{"typeface":"Roboto,sans-serif","color":"#181818","fontSize":12},"headline":{"fontSize":22,"fontWeight":"bold","underlined":0,"cursive":0,"color":"#000000","typeface":"Roboto,sans-serif"},"description":{"fontSize":14,"lineHeight":17,"fontWeight":"normal","underlined":0,"cursive":0,"typeface":"Roboto,sans-serif"},"notes":{"fontSize":12,"fontWeight":"normal","underlined":0,"cursive":1,"color":"#656565","typeface":"Roboto,sans-serif"},"footer":{"color":"#888","fontSize":11,"fontWeight":"normal","underlined":0,"cursive":0,"typeface":"Roboto,sans-serif"},"links":{"color":"#0088CC","fontWeight":"normal","underlined":0,"cursive":0,"typeface":"Roboto,sans-serif"}},"colors":{"general":{"background":"transparent","padding":0},"palette":["#18a1cd","#1d81a2","#15607a","#00dca6","#09bb9f","#009076","#c4c4c4","#c71e1d","#fa8c00","#ffca76","#ffe59c"],"picker":{"rowCount":6}},"options":{"footer":{"logo":{"enabled":0,"height":30,"position":"right"},"getTheData":{"enabled":0,"caption":"Descargar\u00a0los datos"},"embed":{"enabled":0,"caption":"Insertar"},"staticImage":{"enabled":0,"caption":"Descargar la imagen"},"createdWithDatawrapper":1,"sourcePosition":"left","sourceCaption":"Fuente","chartCaption":"Gr\u00e1fico:","createdWithCaption":"Creado con","mapCaption":"Mapa:","tableCaption":"Tabla:","forkCaption":"Based on"}},"pdf":{"fonts":{"Roboto Bold":"https:\/\/static.dwcdn.net\/custom\/themes\/datawrapper-extended-charset\/Roboto-Bold.ttf","Roboto Light":"https:\/\/static.dwcdn.net\/css\/fonts\/roboto\/ttf\/Roboto-Light.ttf","Roboto Medium":"https:\/\/static.dwcdn.net\/css\/fonts\/roboto\/ttf\/Roboto-Medium.ttf","Roboto Regular":"https:\/\/static.dwcdn.net\/custom\/themes\/datawrapper-extended-charset\/Roboto-Regular.ttf","Roboto Bold Italic":"https:\/\/static.dwcdn.net\/custom\/themes\/datawrapper-extended-charset\/Roboto-BoldItalic.ttf","Roboto Light Italic":"https:\/\/static.dwcdn.net\/css\/fonts\/roboto\/ttf\/Roboto-LightItalic.ttf","Roboto Medium Italic":"https:\/\/static.dwcdn.net\/css\/fonts\/roboto\/ttf\/Roboto-MediumItalic.ttf","Roboto Regular Italic":"https:\/\/static.dwcdn.net\/custom\/themes\/datawrapper-extended-charset\/Roboto-Italic.ttf"},"fontStack":true,"cmykColors":[],"defaultFont":"Roboto Regular"},"vis":{"d3-maps-symbols":{"regionFill":"#ededed"}}});
+        }).call(this);
+    </script>
+
+
+    <style type="text/css">
+        @import 'https://static.dwcdn.net/css/roboto.css';
+@font-face {
+  font-family: "RobotoBold";
+  src: url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-Bold.eot');
+  src: url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-Bold.eot?#iefix') format('embedded-opentype'), url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-Bold.woff') format('woff'), url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-Bold.ttf') format('truetype'), url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-Bold.svg#RobotoBold') format('svg');
+}
+@font-face {
+  font-family: "RobotoItalic";
+  src: url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-Italic.eot');
+  src: url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-Italic.eot?#iefix') format('embedded-opentype'), url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-Italic.woff') format('woff'), url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-Italic.ttf') format('truetype'), url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-Italic.svg#RobotoItalic') format('svg');
+}
+@font-face {
+  font-family: "RobotoRegular";
+  src: url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-Regular.eot');
+  src: url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-Regular.eot?#iefix') format('embedded-opentype'), url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-Regular.woff') format('woff'), url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-Regular.ttf') format('truetype'), url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-Regular.svg#RobotoRegular') format('svg');
+}
+@font-face {
+  font-family: "RobotoBoldItalic";
+  src: url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-BoldItalic.eot');
+  src: url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-BoldItalic.eot?#iefix') format('embedded-opentype'), url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-BoldItalic.woff') format('woff'), url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-BoldItalic.ttf') format('truetype'), url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-BoldItalic.svg#RobotoBoldItalic') format('svg');
+}
+.chart {
+  font-family: Roboto,sans-serif;
+  color: #181818;
+  font-size: 12px;
+  background: transparent;
+  margin: 0 0px;
+  height: 100%;
+}
+.chart.vis-height-fit {
+  overflow: hidden;
+}
+.chart a {
+  color: #0088CC;
+  text-decoration: none;
+}
+.chart .dw-chart-header {
+  min-height: 1px;
+  position: relative;
+  overflow: auto;
+}
+.chart .dw-chart-header .header-right {
+  position: absolute;
+  right: 10px;
+  z-index: 20;
+}
+.chart .dw-chart-header h1 {
+  font-family: Roboto,sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  font-style: normal;
+  text-decoration: none;
+  color: #000000;
+  margin: 0 0 10px;
+}
+.chart .dw-chart-header p {
+  font-family: Roboto,sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  font-style: normal;
+  text-decoration: none;
+  margin: 5px 0 10px !important;
+}
+.chart .dw-chart-body.dark-bg .label span {
+  color: #181818;
+  fill: #181818;
+}
+.chart .dw-chart-body .bc-grid-line {
+  border-left-style: solid;
+}
+.chart .dw-chart-body.content-below-chart {
+  margin: 0px 0px 20px 0px;
+}
+.chart .labels text {
+  font-size: 12px;
+}
+.chart .label {
+  font-size: 12px;
+}
+.chart .label span,
+.chart .label tspan {
+  color: #181818;
+  fill: #181818;
+}
+.chart .label.inverted span {
+  text-shadow: 0 0px 2px #000000;
+  color: #ffffff;
+}
+.chart .label.inside:not(.inverted) span {
+  text-shadow: 0 0px 2px #ffffff;
+  color: #333333;
+}
+.chart .label sup {
+  text-shadow: none;
+}
+.chart .label.highlighted {
+  font-weight: bold;
+}
+.chart .label.highlighted,
+.chart .label .label.axis {
+  font-size: 12px;
+  z-index: 100;
+}
+.chart .label.hover {
+  font-weight: bold;
+}
+.chart .label.smaller span {
+  font-size: 80%;
+}
+.chart .dw-chart-notes {
+  font-family: Roboto,sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  font-style: italic;
+  text-decoration: none;
+  color: #656565;
+  margin: 0px 0px 5px 0px;
+  position: relative;
+}
+.chart #footer,
+.chart .dw-chart-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Roboto,sans-serif;
+  font-weight: normal;
+  font-size: 11px;
+  font-style: normal;
+  text-decoration: none;
+  color: #888;
+}
+.chart #footer > div > .footer-block,
+.chart .dw-chart-footer > div > .footer-block {
+  display: inline-block;
+}
+.chart #footer > div > .footer-block.hidden,
+.chart .dw-chart-footer > div > .footer-block.hidden {
+  display: none;
+}
+.chart #footer > div > .footer-block a[href=""],
+.chart .dw-chart-footer > div > .footer-block a[href=""] {
+  color: #888;
+  pointer-events: none;
+  text-decoration: none;
+  padding: 0;
+  border-bottom: 0;
+}
+.chart #footer > div > .footer-block .separator,
+.chart .dw-chart-footer > div > .footer-block .separator {
+  display: inline-block;
+  font-style: initial;
+}
+.chart #footer > div > .footer-block .separator:before,
+.chart .dw-chart-footer > div > .footer-block .separator:before {
+  content: "•";
+  display: inline-block;
+}
+.chart #footer > div .footer-block.hidden:first-child + .footer-block:not(.hidden) .separator,
+.chart #footer > div .footer-block.hidden:first-child
+              + .footer-block.hidden
+              + .footer-block:not(.hidden) .separator,
+.chart #footer > div .footer-block.hidden:first-child
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block:not(.hidden) .separator,
+.chart #footer > div .footer-block.hidden:first-child
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block:not(.hidden) .separator,
+.chart #footer > div .footer-block.hidden:first-child
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block:not(.hidden) .separator,
+.chart #footer > div .footer-block.hidden:first-child
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block:not(.hidden) .separator,
+.chart .dw-chart-footer > div .footer-block.hidden:first-child + .footer-block:not(.hidden) .separator,
+.chart .dw-chart-footer > div .footer-block.hidden:first-child
+              + .footer-block.hidden
+              + .footer-block:not(.hidden) .separator,
+.chart .dw-chart-footer > div .footer-block.hidden:first-child
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block:not(.hidden) .separator,
+.chart .dw-chart-footer > div .footer-block.hidden:first-child
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block:not(.hidden) .separator,
+.chart .dw-chart-footer > div .footer-block.hidden:first-child
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block:not(.hidden) .separator,
+.chart .dw-chart-footer > div .footer-block.hidden:first-child
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block:not(.hidden) .separator {
+  display: none;
+}
+.chart #footer > div > a:first-child::before,
+.chart #footer > div > .source-block:first-child::before,
+.chart #footer > div > .footer-block:first-child::before,
+.chart .dw-chart-footer > div > a:first-child::before,
+.chart .dw-chart-footer > div > .source-block:first-child::before,
+.chart .dw-chart-footer > div > .footer-block:first-child::before {
+  content: "";
+  display: none;
+}
+.chart .dw-chart-notes a,
+.chart .dw-chart-footer a {
+  font-family: Roboto,sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: #0088CC;
+}
+.chart a img {
+  border: 0px;
+}
+.chart .embed-code {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  padding: 15px;
+  background: #eee;
+  color: #000;
+  border-radius: 6px;
+  text-transform: none;
+  font-size: 1em;
+  box-shadow: 2px 2px 0px rgba(0,0,0,0.4);
+  z-index: 10;
+}
+.chart .embed-code textarea {
+  width: 90%;
+  margin-top: 2%;
+  height: 7em;
+}
+.chart .hide {
+  display: none;
+}
+.chart .embed-code .close {
+  cursor: pointer;
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  font-size: 1.125em;
+  opacity: 0.7;
+}
+.chart .embed-code .close:hover {
+  opacity: 1;
+}
+.chart .dw-tooltip {
+  color: #333333;
+}
+.chart .tooltip {
+  z-index: 200;
+  padding-bottom: 0px;
+}
+.chart .tooltip .content {
+  background-color: #fff;
+  border: 1px solid #888;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+  padding: 5px 8px;
+}
+.chart .tooltip label {
+  font-weight: 700;
+}
+.chart .tooltip label:after {
+  content: ": ";
+}
+.chart .logo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.chart .logo .big {
+  display: none;
+}
+.chart svg .axis,
+.chart svg .tick,
+.chart svg .grid,
+.chart svg rect {
+  shape-rendering: crispEdges;
+}
+.chart .filter-links {
+  height: 30px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  border-bottom: 1px solid #ccc;
+  font-size: 12px;
+}
+.chart .filter-links a {
+  color: #666;
+  height: 28px;
+  line-height: 28px;
+  padding: 10px;
+  text-decoration: none;
+}
+.chart .filter-links a:hover {
+  color: #222;
+}
+.chart .filter-links a.active {
+  font-weight: bold;
+  color: #000;
+  box-shadow: none;
+  cursor: default;
+  text-decoration: none;
+  border-bottom: 3px solid #555;
+  padding: 10px 10px 6px 10px;
+}
+.chart .filter-select {
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px 4px 4px 4px;
+  padding: 4px 6px;
+  vertical-align: middle;
+  font-size: 12px;
+}
+.chart.plain #footer {
+  height: 10px;
+}
+.chart.js .noscript {
+  display: none;
+}
+.chart .hidden {
+  display: none;
+}
+.chart .label.annotation span {
+  background: transparent;
+}
+.chart .legend-item.hover .label {
+  font-weight: bold;
+}
+.chart .watermark {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  transform-origin: top left;
+  opacity: 0.182;
+  font-weight: bold;
+  font-size: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.clearfix {
+  display: inline-block;
+}
+html[xmlns] .clearfix {
+  display: block;
+}
+* html .clearfix {
+  height: 1%;
+}
+.point {
+  border: 1px solid #ccc;
+  display: inline-block;
+  position: absolute;
+  background: #fff;
+  z-index: 100;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  top: 20px;
+}
+.point:hover {
+  background: #ebebeb;
+}
+.point.active {
+  background: #ccc;
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  top: 20px;
+  border-color: #888;
+}
+.point-label {
+  position: absolute;
+}
+.line {
+  height: 1px;
+  background: #ccc;
+  position: absolute;
+  left: 0px;
+  top: 30px;
+  z-index: 1;
+}
+.vis-pie-chart path,
+.vis-donut-chart path,
+.vis-election-donut-chart path {
+  stroke-width: 0.5;
+}
+.filter-ui {
+  margin-bottom: 10px;
+}
+.chart .label {
+  position: absolute;
+}
+.chart .label span {
+  overflow-wrap: initial;
+}
+.axis-label {
+  position: absolute;
+}
+.label.tick {
+  white-space: nowrap;
+}
+.label.value {
+  white-space: nowrap;
+  pointer-events: none;
+}
+.legend {
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+}
+.legend div {
+  vertical-align: middle;
+}
+.legend .cc-swatch {
+  display: inline-block;
+  margin-bottom: 3px;
+}
+.legend .cc-color {
+  margin-right: 4px;
+  display: inline-block;
+}
+.legend .legend-text.label {
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+}
+.label.dontshow:not(.highlighted) {
+  transition: opacity 0s;
+  opacity: 0;
+}
+.label .bg {
+  stroke: #ffffff;
+}
+.label.value .bg {
+  stroke-width: 4;
+}
+.label.series .bg {
+  stroke-linejoin: round;
+  stroke-width: 8;
+}
+g.label.hover text,
+g.label.series text {
+  font-weight: bold;
+}
+g.label.series text {
+  font-size: 12px;
+}
+rect,
+g.label,
+.tick.primary {
+  opacity: 1;
+  shape-rendering: crispEdges;
+  -webkit-transition: opacity 0.1s ease-in-out;
+  -moz-transition: opacity 0.1s ease-in-out;
+  -ms-transition: opacity 0.1s ease-in-out;
+  -o-transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
+}
+.tick.primary.unfocus,
+.label.value.unfocus text {
+  opacity: 0.3;
+}
+.chart .label.series.rotate90 {
+  transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  transform-origin: center center;
+}
+.chart .label.series.rotate90.smaller {
+  transform: rotate(-90deg) translate(0,-10%);
+  -moz-transform: rotate(-90deg) translate(0,-10%);
+  -webkit-transform: rotate(-90deg) translate(0,-10%);
+  -ms-transform: rotate(-90deg) translate(0,-10%);
+  -o-transform: rotate(-90deg) translate(0,-10%);
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  transform-origin: center center;
+}
+.chart .label.lbl-align-right.rotate90 {
+  text-align: right !important;
+}
+.chart .label.lbl-align-left.rotate90 {
+  text-align: left !important;
+}
+.chart .label.hover {
+  font-weight: bold;
+}
+.chart .label.only-on-hover {
+  display: none;
+}
+.chart .label.only-on-hover.hover {
+  display: block;
+}
+.chart.png-export .dw-chart-footer .static-image,
+.chart.png-export .dw-chart-footer .chart-action-data,
+.chart.png-export .dw-chart-footer .dw-data-link {
+  display: none !important;
+}
+.chart.png-export a {
+  color: unset !important;
+}
+.map-key {
+  pointer-events: none;
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-Regular.eot');
+  src: url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-Regular.eot?#iefix') format('embedded-opentype'), url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-Regular.woff') format('woff'), url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-Regular.ttf') format('truetype'), url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-Regular.svg#RobotoRegular') format('svg');
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: bold;
+  src: url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-Bold.eot');
+  src: url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-Bold.eot?#iefix') format('embedded-opentype'), url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-Bold.woff') format('woff'), url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-Bold.ttf') format('truetype'), url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-Bold.svg#RobotoBold') format('svg');
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: 400;
+  src: url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-Italic.eot');
+  src: url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-Italic.eot?#iefix') format('embedded-opentype'), url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-Italic.woff') format('woff'), url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-Italic.ttf') format('truetype'), url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-Italic.svg#RobotoItalic') format('svg');
+}
+@font-face {
+  font-family: "Roboto";
+  font-style: italic;
+  font-weight: bold;
+  src: url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-BoldItalic.eot');
+  src: url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-BoldItalic.eot?#iefix') format('embedded-opentype'), url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-BoldItalic.woff') format('woff'), url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-BoldItalic.ttf') format('truetype'), url('//static.dwcdn.net/custom/themes/datawrapper-extended-charset/Roboto-BoldItalic.svg#RobotoBoldItalic') format('svg');
+}
+
+        
+            </style>
+
+    
+
+</head>
+<body class="dw-chart chart vis-height-fit theme-datawrapper-extended-charset vis-column-chart">
+    
+
+                            
+    <div class="dw-chart-header" id="header">
+                    <h1 class="hidden">
+                <span class="chart-title">Fallecidos por días</span>
+            </h1>
+
+            <p class="chart-intro">Datos actualizados a las 11:30 horas del 21 de abril</p>
+            <div class="filter-ui filter-links"><a href="#0" class="active">TOTALES</a><a href="#1">RESIDENCIAS</a></div></div>
+
+    <div class="dw-chart-body content-below-chart column-chart" id="chart" style="position: relative; height: 278px;"><svg height="280" version="1.1" width="1140" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative;"><path style="opacity: 1;" fill="none" stroke="#e8e8e8" d="M21,75L1140,75" class="grid y-gridline" opacity="1"></path><path style="opacity: 1;" fill="none" stroke="#e8e8e8" d="M21,137L1140,137" class="grid y-gridline" opacity="1"></path><path style="opacity: 1;" fill="none" stroke="#e8e8e8" d="M21,199L1140,199" class="grid y-gridline" opacity="1"></path><desc>Created with Raphaël 2.1.2</desc><defs></defs><g><g class="container" transform="translate(21,25)"><g class="axes"><g class="x-axis grid-x" transform="translate(0,236)"><g class="axis-wrapper"><g class="tick primary" transform="translate(12.715909279444926, 0)"><line shape-rendering="crispEdges" stroke="currentColor" y1="0" y2="0"></line><text text-anchor="middle" y="17" style="fill: rgb(51, 51, 51);">9/3</text></g><g class="tick primary" transform="translate(64.84229728704457, 0)"><line shape-rendering="crispEdges" stroke="currentColor" y1="0" y2="0"></line><text text-anchor="middle" y="17" style="fill: rgb(51, 51, 51);">11/3</text></g><g class="tick primary" transform="translate(116.9686852946442, 0)"><line shape-rendering="crispEdges" stroke="currentColor" y1="0" y2="0"></line><text text-anchor="middle" y="17" style="fill: rgb(51, 51, 51);">13/3</text></g><g class="tick primary" transform="translate(169.09507330224383, 0)"><line shape-rendering="crispEdges" stroke="currentColor" y1="0" y2="0"></line><text text-anchor="middle" y="17" style="fill: rgb(51, 51, 51);">15/3</text></g><g class="tick primary" transform="translate(221.2214613098435, 0)"><line shape-rendering="crispEdges" stroke="currentColor" y1="0" y2="0"></line><text text-anchor="middle" y="17" style="fill: rgb(51, 51, 51);">17/3</text></g><g class="tick primary" transform="translate(273.34784931744315, 0)"><line shape-rendering="crispEdges" stroke="currentColor" y1="0" y2="0"></line><text text-anchor="middle" y="17" style="fill: rgb(51, 51, 51);">19/3</text></g><g class="tick primary" transform="translate(325.4742373250428, 0)"><line shape-rendering="crispEdges" stroke="currentColor" y1="0" y2="0"></line><text text-anchor="middle" y="17" style="fill: rgb(51, 51, 51);">21/3</text></g><g class="tick primary" transform="translate(377.60062533264244, 0)"><line shape-rendering="crispEdges" stroke="currentColor" y1="0" y2="0"></line><text text-anchor="middle" y="17" style="fill: rgb(51, 51, 51);">23/3</text></g><g class="tick primary" transform="translate(429.7270133402421, 0)"><line shape-rendering="crispEdges" stroke="currentColor" y1="0" y2="0"></line><text text-anchor="middle" y="17" style="fill: rgb(51, 51, 51);">25/3</text></g><g class="tick primary" transform="translate(481.85340134784167, 0)"><line shape-rendering="crispEdges" stroke="currentColor" y1="0" y2="0"></line><text text-anchor="middle" y="17" style="fill: rgb(51, 51, 51);">27/3</text></g><g class="tick primary" transform="translate(533.9797893554414, 0)"><line shape-rendering="crispEdges" stroke="currentColor" y1="0" y2="0"></line><text text-anchor="middle" y="17" style="fill: rgb(51, 51, 51);">29/3</text></g><g class="tick primary" transform="translate(585.0202109462159, 0)"><line shape-rendering="crispEdges" stroke="currentColor" y1="0" y2="0"></line><text text-anchor="middle" y="17" style="fill: rgb(51, 51, 51);">31/3</text></g><g class="tick primary" transform="translate(611.0834049500157, 0)"><line shape-rendering="crispEdges" stroke="currentColor" y1="0" y2="0"></line><text text-anchor="middle" y="17" style="fill: rgb(51, 51, 51);">1/4</text></g><g class="tick primary" transform="translate(663.2097929576155, 0)"><line shape-rendering="crispEdges" stroke="currentColor" y1="0" y2="0"></line><text text-anchor="middle" y="17" style="fill: rgb(51, 51, 51);">3/4</text></g><g class="tick primary" transform="translate(715.3361809652151, 0)"><line shape-rendering="crispEdges" stroke="currentColor" y1="0" y2="0"></line><text text-anchor="middle" y="17" style="fill: rgb(51, 51, 51);">5/4</text></g><g class="tick primary" transform="translate(767.4625689728147, 0)"><line shape-rendering="crispEdges" stroke="currentColor" y1="0" y2="0"></line><text text-anchor="middle" y="17" style="fill: rgb(51, 51, 51);">7/4</text></g><g class="tick primary" transform="translate(819.5889569804144, 0)"><line shape-rendering="crispEdges" stroke="currentColor" y1="0" y2="0"></line><text text-anchor="middle" y="17" style="fill: rgb(51, 51, 51);">9/4</text></g><g class="tick primary" transform="translate(871.7153449880141, 0)"><line shape-rendering="crispEdges" stroke="currentColor" y1="0" y2="0"></line><text text-anchor="middle" y="17" style="fill: rgb(51, 51, 51);">11/4</text></g><g class="tick primary" transform="translate(923.8417329956136, 0)"><line shape-rendering="crispEdges" stroke="currentColor" y1="0" y2="0"></line><text text-anchor="middle" y="17" style="fill: rgb(51, 51, 51);">13/4</text></g><g class="tick primary" transform="translate(975.9681210032134, 0)"><line shape-rendering="crispEdges" stroke="currentColor" y1="0" y2="0"></line><text text-anchor="middle" y="17" style="fill: rgb(51, 51, 51);">15/4</text></g><g class="tick primary" transform="translate(1028.094509010813, 0)"><line shape-rendering="crispEdges" stroke="currentColor" y1="0" y2="0"></line><text text-anchor="middle" y="17" style="fill: rgb(51, 51, 51);">17/4</text></g><g class="tick primary" transform="translate(1080.2208970184126, 0)"><line shape-rendering="crispEdges" stroke="currentColor" y1="0" y2="0"></line><text text-anchor="middle" y="17" style="fill: rgb(51, 51, 51);">19/4</text></g></g><g class="labels series"><g class="label series" transform="translate(12.715909279444926,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(38.77910328324475,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(64.84229728704457,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(90.9054912908444,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(116.9686852946442,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(143.03187929844404,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(169.09507330224383,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(195.15826730604368,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(221.2214613098435,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(247.2846553136433,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(273.34784931744315,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(299.41104332124297,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(325.4742373250428,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(351.5374313288426,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(377.60062533264244,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(403.6638193364422,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(429.7270133402421,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(455.7902073440419,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(481.85340134784167,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(507.91659535164155,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(533.9797893554414,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(558.9570169424162,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(585.0202109462159,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(611.0834049500157,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(637.1465989538157,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(663.2097929576155,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(689.2729869614153,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(715.3361809652151,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(741.3993749690148,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(767.4625689728147,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(793.5257629766146,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(819.5889569804144,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(845.6521509842142,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(871.7153449880141,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(897.7785389918138,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(923.8417329956136,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(949.9049269994134,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(975.9681210032134,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(1002.0313150070132,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(1028.094509010813,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(1054.1577030146127,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(1080.2208970184126,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g><g class="label series" transform="translate(1106.2840910222124,0)"><text class="label series bg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text><text class="label series fg dw-bold" y="17" style="fill: rgb(51, 51, 51);"></text></g></g></g></g><g class="columns"><g class="column" transform="translate(12.715909279444926,0)"><rect class="column" y="223.57894736842104" x="-9" width="17" height="12.42105263157896" fill="#00834b"></rect></g><g class="column" transform="translate(38.77910328324475,0)"><rect class="column" y="223.57894736842104" x="-9" width="17" height="12.42105263157896" fill="#00834b"></rect></g><g class="column" transform="translate(64.84229728704457,0)"><rect class="column" y="236" x="-9" width="17" height="0" fill="#00834b"></rect></g><g class="column" transform="translate(90.9054912908444,0)"><rect class="column" y="223.57894736842104" x="-9" width="17" height="12.42105263157896" fill="#00834b"></rect></g><g class="column" transform="translate(116.9686852946442,0)"><rect class="column" y="236" x="-9" width="17" height="0" fill="#00834b"></rect></g><g class="column" transform="translate(143.03187929844404,0)"><rect class="column" y="236" x="-9" width="17" height="0" fill="#00834b"></rect></g><g class="column" transform="translate(169.09507330224383,0)"><rect class="column" y="223.57894736842104" x="-9" width="17" height="12.42105263157896" fill="#00834b"></rect></g><g class="column" transform="translate(195.15826730604368,0)"><rect class="column" y="223.57894736842104" x="-9" width="17" height="12.42105263157896" fill="#00834b"></rect></g><g class="column" transform="translate(221.2214613098435,0)"><rect class="column" y="236" x="-9" width="17" height="0" fill="#00834b"></rect></g><g class="column" transform="translate(247.2846553136433,0)"><rect class="column" y="236" x="-9" width="17" height="0" fill="#00834b"></rect></g><g class="column" transform="translate(273.34784931744315,0)"><rect class="column" y="211.1578947368421" x="-9" width="17" height="24.84210526315789" fill="#00834b"></rect></g><g class="column" transform="translate(299.41104332124297,0)"><rect class="column" y="136.63157894736844" x="-9" width="17" height="99.36842105263156" fill="#00834b"></rect></g><g class="column" transform="translate(325.4742373250428,0)"><rect class="column" y="198.73684210526315" x="-9" width="17" height="37.26315789473685" fill="#00834b"></rect></g><g class="column" transform="translate(351.5374313288426,0)"><rect class="column" y="186.31578947368422" x="-9" width="17" height="49.68421052631578" fill="#00834b"></rect></g><g class="column" transform="translate(377.60062533264244,0)"><rect class="column" y="136.63157894736844" x="-9" width="17" height="99.36842105263156" fill="#00834b"></rect></g><g class="column" transform="translate(403.6638193364422,0)"><rect class="column" y="149.05263157894737" x="-9" width="17" height="86.94736842105263" fill="#00834b"></rect></g><g class="column" transform="translate(429.7270133402421,0)"><rect class="column" y="161.4736842105263" x="-9" width="17" height="74.5263157894737" fill="#00834b"></rect></g><g class="column" transform="translate(455.7902073440419,0)"><rect class="column" y="86.94736842105263" x="-9" width="17" height="149.05263157894737" fill="#00834b"></rect></g><g class="column" transform="translate(481.85340134784167,0)"><rect class="column" y="111.78947368421053" x="-9" width="17" height="124.21052631578947" fill="#00834b"></rect></g><g class="column" transform="translate(507.91659535164155,0)"><rect class="column" y="198.73684210526315" x="-9" width="17" height="37.26315789473685" fill="#00834b"></rect></g><g class="column" transform="translate(533.9797893554414,0)"><rect class="column" y="198.73684210526315" x="-9" width="17" height="37.26315789473685" fill="#00834b"></rect></g><g class="column" transform="translate(558.9570169424162,0)"><rect class="column" y="62.10526315789474" x="-9" width="17" height="173.89473684210526" fill="#00834b"></rect></g><g class="column" transform="translate(585.0202109462159,0)"><rect class="column" y="173.89473684210526" x="-9" width="17" height="62.10526315789474" fill="#00834b"></rect></g><g class="column" transform="translate(611.0834049500157,0)"><rect class="column" y="99.36842105263156" x="-9" width="17" height="136.63157894736844" fill="#00834b"></rect></g><g class="column" transform="translate(637.1465989538157,0)"><rect class="column" y="136.63157894736844" x="-9" width="17" height="99.36842105263156" fill="#00834b"></rect></g><g class="column" transform="translate(663.2097929576155,0)"><rect class="column" y="0" x="-9" width="17" height="236" fill="#00834b"></rect></g><g class="column" transform="translate(689.2729869614153,0)"><rect class="column" y="161.4736842105263" x="-9" width="17" height="74.5263157894737" fill="#00834b"></rect></g><g class="column" transform="translate(715.3361809652151,0)"><rect class="column" y="149.05263157894737" x="-9" width="17" height="86.94736842105263" fill="#00834b"></rect></g><g class="column" transform="translate(741.3993749690148,0)"><rect class="column" y="0" x="-9" width="17" height="236" fill="#00834b"></rect></g><g class="column" transform="translate(767.4625689728147,0)"><rect class="column" y="24.84210526315789" x="-9" width="17" height="211.1578947368421" fill="#00834b"></rect></g><g class="column" transform="translate(793.5257629766146,0)"><rect class="column" y="173.89473684210526" x="-9" width="17" height="62.10526315789474" fill="#00834b"></rect></g><g class="column" transform="translate(819.5889569804144,0)"><rect class="column" y="62.10526315789474" x="-9" width="17" height="173.89473684210526" fill="#00834b"></rect></g><g class="column" transform="translate(845.6521509842142,0)"><rect class="column" y="99.36842105263156" x="-9" width="17" height="136.63157894736844" fill="#00834b"></rect></g><g class="column" transform="translate(871.7153449880141,0)"><rect class="column" y="86.94736842105263" x="-9" width="17" height="149.05263157894737" fill="#00834b"></rect></g><g class="column" transform="translate(897.7785389918138,0)"><rect class="column" y="186.31578947368422" x="-9" width="17" height="49.68421052631578" fill="#00834b"></rect></g><g class="column" transform="translate(923.8417329956136,0)"><rect class="column" y="99.36842105263156" x="-9" width="17" height="136.63157894736844" fill="#00834b"></rect></g><g class="column" transform="translate(949.9049269994134,0)"><rect class="column" y="86.94736842105263" x="-9" width="17" height="149.05263157894737" fill="#00834b"></rect></g><g class="column" transform="translate(975.9681210032134,0)"><rect class="column" y="99.36842105263156" x="-9" width="17" height="136.63157894736844" fill="#00834b"></rect></g><g class="column" transform="translate(1002.0313150070132,0)"><rect class="column" y="173.89473684210526" x="-9" width="17" height="62.10526315789474" fill="#00834b"></rect></g><g class="column" transform="translate(1028.094509010813,0)"><rect class="column" y="111.78947368421053" x="-9" width="17" height="124.21052631578947" fill="#00834b"></rect></g><g class="column" transform="translate(1054.1577030146127,0)"><rect class="column" y="173.89473684210526" x="-9" width="17" height="62.10526315789474" fill="#00834b"></rect></g><g class="column" transform="translate(1080.2208970184126,0)"><rect class="column" y="136.63157894736844" x="-9" width="17" height="99.36842105263156" fill="#00834b"></rect></g><g class="column" transform="translate(1106.2840910222124,0)"><rect class="column" y="124.21052631578948" x="-9" width="17" height="111.78947368421052" fill="#00834b"></rect></g></g></g></g><rect class="bgRect" style="fill: transparent;" width="1140" height="319"></rect><path style="opacity: 1;" fill="none" stroke="#333333" d="M21,261L1140,261" class="grid x-axis" opacity="1"></path></svg><div style="position: absolute; left: -10000px;" class="label  axis y-tick-values tick secondary"><span style="color: rgb(166, 166, 166);">15</span></div><div style="position: absolute; left: -10000px; width: 100px;" class="label  value"><span style="color: rgb(166, 166, 166);">X</span></div><div class="label axis y-tick-values tick secondary" style="position: absolute; width: 7px; opacity: 1; text-align: right; left: 6px; top: 191.5px; height: 15px;"><span style="color: rgb(166, 166, 166);">5</span></div><div class="label axis y-tick-values tick secondary" style="position: absolute; width: 13px; opacity: 1; text-align: right; left: 0px; top: 129.5px; height: 15px;"><span style="color: rgb(166, 166, 166);">10</span></div><div class="label axis y-tick-values tick secondary" style="position: absolute; width: 13px; opacity: 1; text-align: right; left: 0px; top: 67.5px; height: 15px;"><span style="color: rgb(166, 166, 166);">15</span></div><div class="labels values"><div class="label value dontshow" style="left: 30.3492px; top: 223.579px; color: rgb(123, 123, 123);"><span>1</span></div><div class="label value dontshow" style="left: 56.4124px; top: 223.579px; color: rgb(123, 123, 123);"><span>1</span></div><div class="label value dontshow" style="left: 82.4756px; top: 236px; color: rgb(123, 123, 123);"><span>0</span></div><div class="label value dontshow" style="left: 108.539px; top: 223.579px; color: rgb(123, 123, 123);"><span>1</span></div><div class="label value dontshow" style="left: 134.602px; top: 236px; color: rgb(123, 123, 123);"><span>0</span></div><div class="label value dontshow" style="left: 160.665px; top: 236px; color: rgb(123, 123, 123);"><span>0</span></div><div class="label value dontshow" style="left: 186.728px; top: 223.579px; color: rgb(123, 123, 123);"><span>1</span></div><div class="label value dontshow" style="left: 212.792px; top: 223.579px; color: rgb(123, 123, 123);"><span>1</span></div><div class="label value dontshow" style="left: 238.855px; top: 236px; color: rgb(123, 123, 123);"><span>0</span></div><div class="label value dontshow" style="left: 264.918px; top: 236px; color: rgb(123, 123, 123);"><span>0</span></div><div class="label value dontshow" style="left: 290.981px; top: 211.158px; color: rgb(123, 123, 123);"><span>2</span></div><div class="label value dontshow" style="left: 317.044px; top: 136.632px; color: rgb(123, 123, 123);"><span>8</span></div><div class="label value dontshow" style="left: 343.108px; top: 198.737px; color: rgb(123, 123, 123);"><span>3</span></div><div class="label value dontshow" style="left: 369.171px; top: 186.316px; color: rgb(123, 123, 123);"><span>4</span></div><div class="label value dontshow" style="left: 395.234px; top: 136.632px; color: rgb(123, 123, 123);"><span>8</span></div><div class="label value dontshow" style="left: 421.297px; top: 149.053px; color: rgb(123, 123, 123);"><span>7</span></div><div class="label value dontshow" style="left: 447.36px; top: 161.474px; color: rgb(123, 123, 123);"><span>6</span></div><div class="label value dontshow" style="left: 470.057px; top: 86.9474px; color: rgb(123, 123, 123);"><span>12</span></div><div class="label value dontshow" style="left: 496.12px; top: 111.789px; color: rgb(123, 123, 123);"><span>10</span></div><div class="label value dontshow" style="left: 525.55px; top: 198.737px; color: rgb(123, 123, 123);"><span>3</span></div><div class="label value dontshow" style="left: 551.613px; top: 198.737px; color: rgb(123, 123, 123);"><span>3</span></div><div class="label value dontshow" style="left: 573.224px; top: 62.1053px; color: rgb(123, 123, 123);"><span>14</span></div><div class="label value dontshow" style="left: 602.654px; top: 173.895px; color: rgb(123, 123, 123);"><span>5</span></div><div class="label value dontshow" style="left: 625.35px; top: 99.3684px; color: rgb(123, 123, 123);"><span>11</span></div><div class="label value dontshow" style="left: 654.78px; top: 136.632px; color: rgb(123, 123, 123);"><span>8</span></div><div class="label value dontshow" style="left: 677.476px; top: 0px; color: rgb(123, 123, 123);"><span>19</span></div><div class="label value dontshow" style="left: 706.906px; top: 161.474px; color: rgb(123, 123, 123);"><span>6</span></div><div class="label value dontshow" style="left: 732.97px; top: 149.053px; color: rgb(123, 123, 123);"><span>7</span></div><div class="label value dontshow" style="left: 755.666px; top: 0px; color: rgb(123, 123, 123);"><span>19</span></div><div class="label value dontshow" style="left: 781.729px; top: 24.8421px; color: rgb(123, 123, 123);"><span>17</span></div><div class="label value dontshow" style="left: 811.159px; top: 173.895px; color: rgb(123, 123, 123);"><span>5</span></div><div class="label value dontshow" style="left: 833.856px; top: 62.1053px; color: rgb(123, 123, 123);"><span>14</span></div><div class="label value dontshow" style="left: 859.919px; top: 99.3684px; color: rgb(123, 123, 123);"><span>11</span></div><div class="label value dontshow" style="left: 885.982px; top: 86.9474px; color: rgb(123, 123, 123);"><span>12</span></div><div class="label value dontshow" style="left: 915.412px; top: 186.316px; color: rgb(123, 123, 123);"><span>4</span></div><div class="label value dontshow" style="left: 938.108px; top: 99.3684px; color: rgb(123, 123, 123);"><span>11</span></div><div class="label value dontshow" style="left: 964.172px; top: 86.9474px; color: rgb(123, 123, 123);"><span>12</span></div><div class="label value dontshow" style="left: 990.235px; top: 99.3684px; color: rgb(123, 123, 123);"><span>11</span></div><div class="label value dontshow" style="left: 1019.66px; top: 173.895px; color: rgb(123, 123, 123);"><span>5</span></div><div class="label value dontshow" style="left: 1042.36px; top: 111.789px; color: rgb(123, 123, 123);"><span>10</span></div><div class="label value dontshow" style="left: 1071.79px; top: 173.895px; color: rgb(123, 123, 123);"><span>5</span></div><div class="label value dontshow" style="left: 1097.85px; top: 136.632px; color: rgb(123, 123, 123);"><span>8</span></div><div class="label value dontshow" style="left: 1123.92px; top: 124.211px; color: rgb(123, 123, 123);"><span>9</span></div></div></div>
+
+                        <div class="dw-chart-notes hidden" style="">
+                
+            </div>
+            
+    
+    
+            <div class="dw-chart-footer" id="footer">
+            <div class="footer-left">
+                
+                                    
+                                                <span class="footer-block byline-block hidden">
+                            <span class="byline-caption">
+                            Gráfico:
+                            </span>
+
+                            <span class="chart-byline"></span>
+
+                            <span class="byline-append"></span>
+                        </span>
+                        
+
+                                                <span class="footer-block source-block ">
+                                                        <span class="separator"></span>
+                            <span class="source-caption">Fuente:</span>
+                            <a href="https://web.larioja.org/" rel="nofollow noopener noreferrer" target="_blank">Gobierno de La Rioja</a>
+                        </span>
+                        
+                        
+
+                                                
+                                                
+                                                
+                                                                        <span class="footer-block attribution">
+                            <span class="separator"></span>
+                            <a href="https://www.datawrapper.de/_/LdknE/" target="_blank">Creado con  Datawrapper</a>
+                        </span>
+                        
+                                                                        </div>
+            <div class="footer-right">
+                
+                            </div>
+        </div>
+    
+                
+
+    
+    <script type="text/javascript">
+    setTimeout(function() {
+        var img = document.createElement('img');
+        img.setAttribute('width', 1);
+        img.setAttribute('height', 1);
+        img.style.float = "right";
+        img.setAttribute('src', '//stats.datawrapper.de/LdknE/datawrapper.gif?r='+escape(document.referrer || ''));
+        document.body.appendChild(img);
+    },10);
+</script>
+
+
+
+    <script type="text/javascript" charset="utf-8">
+
+    (function() {
+
+        /*!  */
+var render=function(){"use strict";function e(e){return function(t){var n=t.toLowerCase().match(e);return!!n&&parseInt(n[1],10)}}var t={chrome:e(/chrom(?:e|ium)\/([0-9]+)\./),firefox:e(/firefox\/([0-9]+\.*[0-9]*)/),safari:e(/version\/([0-9]+).[0-9]+.[0-9]+ safari/),ie:e(/(?:msie |rv:)([0-9]+).[0-9]+/),edge:e(/edge\/([0-9]+).[0-9]+.[0-9]+/)};var n,i=(function(e){!function(){function t(e,t){document.addEventListener?e.addEventListener("scroll",t,!1):e.attachEvent("scroll",t)}function n(e){this.a=document.createElement("div"),this.a.setAttribute("aria-hidden","true"),this.a.appendChild(document.createTextNode(e)),this.b=document.createElement("span"),this.c=document.createElement("span"),this.h=document.createElement("span"),this.f=document.createElement("span"),this.g=-1,this.b.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.c.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.f.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.h.style.cssText="display:inline-block;width:200%;height:200%;font-size:16px;max-width:none;",this.b.appendChild(this.h),this.c.appendChild(this.f),this.a.appendChild(this.b),this.a.appendChild(this.c)}function i(e,t){e.a.style.cssText="max-width:none;min-width:20px;min-height:20px;display:inline-block;overflow:hidden;position:absolute;width:auto;margin:0;padding:0;top:-999px;white-space:nowrap;font-synthesis:none;font:"+t+";"}function o(e){var t=e.a.offsetWidth,n=t+100;return e.f.style.width=n+"px",e.c.scrollLeft=n,e.b.scrollLeft=e.b.scrollWidth+100,e.g!==t&&(e.g=t,!0)}function r(e,n){function i(){var e=r;o(e)&&e.a.parentNode&&n(e.g)}var r=e;t(e.b,i),t(e.c,i),o(e)}function a(e,t){var n=t||{};this.family=e,this.style=n.style||"normal",this.weight=n.weight||"normal",this.stretch=n.stretch||"normal"}var s=null,d=null,c=null,l=null;function h(){return null===l&&(l=!!document.fonts),l}function f(e,t){return[e.style,e.weight,function(){if(null===c){var e=document.createElement("div");try{e.style.font="condensed 100px sans-serif"}catch(e){}c=""!==e.style.font}return c}()?e.stretch:"","100px",t].join(" ")}a.prototype.load=function(e,t){var o=this,a=e||"BESbswy",c=0,l=t||3e3,u=(new Date).getTime();return new Promise(function(e,t){if(h()&&!function(){if(null===d)if(h()&&/Apple/.test(window.navigator.vendor)){var e=/AppleWebKit\/([0-9]+)(?:\.([0-9]+))(?:\.([0-9]+))/.exec(window.navigator.userAgent);d=!!e&&603>parseInt(e[1],10)}else d=!1;return d}()){var p=new Promise(function(e,t){!function n(){(new Date).getTime()-u>=l?t(Error(l+"ms timeout exceeded")):document.fonts.load(f(o,'"'+o.family+'"'),a).then(function(t){1<=t.length?e():setTimeout(n,25)},t)}()}),m=new Promise(function(e,t){c=setTimeout(function(){t(Error(l+"ms timeout exceeded"))},l)});Promise.race([m,p]).then(function(){clearTimeout(c),e(o)},t)}else!function(e){document.body?e():document.addEventListener?document.addEventListener("DOMContentLoaded",function t(){document.removeEventListener("DOMContentLoaded",t),e()}):document.attachEvent("onreadystatechange",function t(){"interactive"!=document.readyState&&"complete"!=document.readyState||(document.detachEvent("onreadystatechange",t),e())})}(function(){function d(){var t;(t=-1!=w&&-1!=v||-1!=w&&-1!=g||-1!=v&&-1!=g)&&((t=w!=v&&w!=g&&v!=g)||(null===s&&(t=/AppleWebKit\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent),s=!!t&&(536>parseInt(t[1],10)||536===parseInt(t[1],10)&&11>=parseInt(t[2],10))),t=s&&(w==y&&v==y&&g==y||w==x&&v==x&&g==x||w==b&&v==b&&g==b)),t=!t),t&&(E.parentNode&&E.parentNode.removeChild(E),clearTimeout(c),e(o))}var h=new n(a),p=new n(a),m=new n(a),w=-1,v=-1,g=-1,y=-1,x=-1,b=-1,E=document.createElement("div");E.dir="ltr",i(h,f(o,"sans-serif")),i(p,f(o,"serif")),i(m,f(o,"monospace")),E.appendChild(h.a),E.appendChild(p.a),E.appendChild(m.a),document.body.appendChild(E),y=h.a.offsetWidth,x=p.a.offsetWidth,b=m.a.offsetWidth,function e(){if((new Date).getTime()-u>=l)E.parentNode&&E.parentNode.removeChild(E),t(Error(l+"ms timeout exceeded"));else{var n=document.hidden;!0!==n&&void 0!==n||(w=h.a.offsetWidth,v=p.a.offsetWidth,g=m.a.offsetWidth,d()),c=setTimeout(e,50)}}(),r(h,function(e){w=e,d()}),i(h,f(o,'"'+o.family+'",sans-serif')),r(p,function(e){v=e,d()}),i(p,f(o,'"'+o.family+'",serif')),r(m,function(e){g=e,d()}),i(m,f(o,'"'+o.family+'",monospace'))})})},e.exports=a}()}(n={exports:{}},n.exports),n.exports);return function(e){var n=e.visJSON,o=e.chartJSON,r=e.chartData,a=e.isPreview,s=e.chartLocale,d=e.metricPrefix,c=e.themeId,l=e.templateJS,h=e.fontsJSON,f=e.typographyJSON,u=e.locales,p=e.assetDomain;window.visJSON=n;var m,w,v,g,y,x,b,E,N={firefox:[30,51],chrome:[20,54],ie:[6,11],edge:[12,18],safari:[6,12]},S=(m=navigator.userAgent,w="undefined"!=typeof InstallTrigger,v=/constructor/i.test(window.HTMLElement)||"[object SafariRemoteNotification]"===(!window.safari||window.safari.pushNotification).toString(),g=!!document.documentMode,y=!g&&!!window.StyleMedia,x=!!window.chrome&&!!window.chrome.loadTimes,b=/; wv/.test(m)&&/Chrome/.test(m),{browser:E=x||b?"chrome":w?"firefox":v?"safari":g?"ie":!!y&&"edge",version:!(!E||!t[E])&&t[E](m)}),T=document.createElement("script");if(T.type="text/javascript",T.async=!0,T.onload=C,T.onerror=C,S.browser&&N[S.browser]&&S.version>=N[S.browser][0]){if(S.version>N[S.browser][1])return C();T.src="https://"+p+"/assets/polyfills/"+S.browser+"-"+S.version+".js"}else T.src="https://"+p+"/assets/polyfills/all.js";function C(){__dw.init(Object.assign({visJSON:n,chartJSON:o,data:r,preview:a,chartLocale:s,locales:u,themeId:c,visId:o.type,lang:s.substr(0,2),metricPrefix:d},window.__dwParams||{})),function(e,t){var n=Array.isArray(e)?[]:Object.keys(e),o=new Set(n);Object.keys(t).forEach(function(e){var n=t[e].typeface;n&&n.split(",").map(function(e){return e.trim()}).forEach(function(e){return o.add(e)})});var r=[];return o.forEach(function(e){var t=new i(e);r.push(t.load(null,5e3))}),Promise.all(r)}(h,f).then(function(){return __dw.render()}).catch(function(){}),/iP(hone|od|ad)/.test(navigator.platform)&&(window.onload=__dw.render());var e=!1,t=n.id,p=dw.theme(c);p&&t&&("d3-pies"===t||"d3-donuts"===t||"d3-multiple-pies"===t||"d3-multiple-donuts"===t)&&(e=function(e,t,n){if(void 0===t&&(t=null),void 0===n&&(n=null),!t)return e;for(var i=t.split("."),o=e,r=0;r<i.length&&null!==o&&void 0!==o;r++)o=o[i[r]];return void 0===o||null===o?n:o}(p,"vis.d3-pies.fitchart",0));var m="1"===new URLSearchParams(window.location.search).get("fitchart")||1===e||!0===e;setInterval(function(){var e,t;if("fixed"!==n.height||m){if(__dw.params.preview||!__dw.vis.chart().get("metadata.publish.chart-height"))return;t=dw.utils.getNonChartHeight()+__dw.vis.chart().get("metadata.publish.chart-height")}else t=$("html").outerHeight(!0);window.parent.postMessage({"datawrapper-height":(e={},e[o.id]=t,e)},"*"),window.parent.postMessage({sentinel:"amp",type:"embed-size",height:t},"*"),window.parent.postMessage(JSON.stringify({src:window.location.toString(),context:"iframe.resize",height:t}),"*")},1e3),"function"==typeof l&&l()}document.getElementsByTagName("head")[0].appendChild(T)}}();
+
+        render({
+            visJSON: {"id":"column-chart","title":"Column Chart","version":"dca10255","dimensions":1,"order":9,"less":"\/var\/www\/datawrapper\/plugins\/visualization-column-charts\/less\/column-chart.less","dependencies":{"globalize":true,"jquery":true,"numeral":true,"dayjs":true},"axes":{"labels":{"accepts":["text","date"]},"columns":{"accepts":["number"],"multiple":true}},"svelte-controls":true,"__static_path":"assets\/plugins\/visualization-column-charts\/","__static_path_fs":"..\/\/www\/static\/plugins\/visualization-column-charts\/","__plugin":"visualization-column-charts","workflow":[{"id":"upload","title":"Upload Data"},{"id":"describe","title":"Check & Describe"},{"id":"visualize","title":"Visualize"},{"id":"publish","title":"Publish & Embed"}],"svelte-workflow":"chart","locale":[]},
+            chartJSON: {"id":"LdknE","title":"Fallecidos por d\u00edas","theme":"datawrapper-extended-charset","createdAt":"2020-04-07 10:49:10","lastModifiedAt":"2020-04-21 09:31:56","type":"column-chart","metadata":{"data":{"transpose":false,"vertical-header":true,"horizontal-header":true,"column-format":{"FECHA":{"type":"date","ignore":false,"number-append":"","number-format":"auto","number-divisor":0,"number-prepend":""}},"upload-method":"copy"},"visualize":{"highlighted-series":[],"highlighted-values":[],"x-grid":"off","y-grid":"on","scale-y":"linear","sort-by":"first","category":"direct","labeling":"right","color-key":true,"base-color":"#00834b","grid-lines":"show","bar-padding":60,"label-space":30,"sort-values":false,"valueLabels":{"show":"hover","enabled":true,"placement":"outside"},"yAxisLabels":{"enabled":true,"alignment":"left","placement":"outside"},"custom-range":["",""],"custom-ticks":"","fill-between":false,"grid-lines-x":{"type":"ticks","enabled":false},"label-colors":false,"label-margin":0,"line-symbols":false,"custom-colors":[],"interpolation":"linear","reverse-order":false,"rotate-labels":"auto","show-tooltips":true,"x-grid-format":"D\/M","x-tick-format":"YYYY","y-grid-format":"0,0.[00]","y-grid-labels":"auto","absolute-scale":true,"categoryLabels":{"enabled":true,"position":"direct"},"chart-type-set":true,"custom-range-x":["",""],"custom-ticks-x":"","negative-color":false,"series-padding":60,"connector-lines":true,"line-symbols-on":"both","y-grid-subdivide":true,"custom-area-fills":[],"line-symbols-size":3.5,"line-value-labels":false,"line-symbols-shape":"circle","y-grid-label-align":"left","line-symbols-opacity":1,"area-fill-color-below":"#cccccc","tooltip-number-format":"0,0.[00]","area-fill-color-between":"#cccccc"},"describe":{"source-name":"Gobierno de La Rioja","source-url":"https:\/\/web.larioja.org\/","number-format":"-","number-divisor":0,"number-append":"","number-prepend":"","intro":"Datos actualizados a las 11:30 horas del 21 de abril","byline":"","hide-title":true},"publish":{"embed-width":600,"embed-height":400,"text":"#333333","background":"#ffffff","embed-codes":{"embed-method-iframe":"<iframe title=\"Fallecidos por d&iacute;as\" aria-label=\"Column Chart\" src=\"\/\/datawrapper.dwcdn.net\/LdknE\/23\/\" scrolling=\"no\" frameborder=\"0\" style=\"border: none;\" width=\"600\" height=\"400\"><\/iframe>","embed-method-responsive":"<iframe title=\"Fallecidos por d&iacute;as\" aria-label=\"Column Chart\" id=\"datawrapper-chart-LdknE\" src=\"\/\/datawrapper.dwcdn.net\/LdknE\/23\/\" scrolling=\"no\" frameborder=\"0\" style=\"width: 0; min-width: 100% !important; border: none;\" height=\"400\"><\/iframe><script type=\"text\/javascript\">!function(){\"use strict\";window.addEventListener(\"message\",function(a){if(void 0!==a.data[\"datawrapper-height\"])for(var e in a.data[\"datawrapper-height\"]){var t=document.getElementById(\"datawrapper-chart-\"+e)||document.querySelector(\"iframe[src*='\"+e+\"']\");t&&(t.style.height=a.data[\"datawrapper-height\"][e]+\"px\")}})}();\n<\/script>"},"chart-height":286,"embed-heights":{"100":478,"200":417,"300":417,"400":400,"500":400,"700":400,"800":400,"900":400,"1000":400}},"annotate":{"notes":""},"json_error":null},"authorId":215233,"showInGallery":false,"language":"es-ES","guestSession":null,"lastEditStep":5,"publishedAt":"2020-04-21 09:32:01","publicUrl":"\/\/datawrapper.dwcdn.net\/LdknE\/23\/","publicVersion":23,"organizationId":null,"forkedFrom":null,"externalData":null,"forkable":false,"isFork":false,"inFolder":null,"utf8":false,"author":{"id":215233,"email":"web@larioja.org","name":null,"website":null,"socialmedia":null,"isLoggedIn":true,"isGuest":false,"isActivated":true,"isAdmin":false}},
+            chartData: "FECHA,TOTALES,RESIDENCIAS\n3\/9\/20,1,0\n3\/10\/20,1,0\n3\/11\/20,0,0\n3\/12\/20,1,0\n3\/13\/20,0,0\n3\/14\/20,0,0\n3\/15\/20,1,0\n3\/16\/20,1,0\n3\/17\/20,0,0\n3\/18\/20,0,0\n3\/19\/20,2,0\n3\/20\/20,8,0\n3\/21\/20,3,0\n3\/22\/20,4,0\n3\/23\/20,8,6\n3\/24\/20,7,1\n3\/25\/20,6,2\n3\/26\/20,12,3\n3\/27\/20,10,6\n3\/28\/20,3,0\n3\/29\/20,3,3\n3\/30\/20,14,4\n3\/31\/20,5,4\n4\/1\/20,11,5\n4\/2\/20,8,6\n4\/3\/20,19,14\n4\/4\/20,6,4\n4\/5\/20,7,5\n4\/6\/20,19,14\n4\/7\/20,17,8\n4\/8\/20,5,4\n4\/9\/20,14,10\n4\/10\/20,11,5\n4\/11\/20,12,7\n4\/12\/20,4,3\n4\/13\/20,11,7\n4\/14\/20,12,10\n4\/15\/20,11,7\n4\/16\/20,5,3\n4\/17\/20,10,9\n4\/18\/20,5,2\n4\/19\/20,8,4\n4\/20\/20,9,6\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n,,\n",
+            assetDomain: 'datawrapper.dwcdn.net',
+            isPreview: false,
+            chartLocale: 'es-ES',
+            locales: {
+numeral: {delimiters: {thousands: '.',decimal: ','},abbreviations: {thousand: 'k',million: 'mm',billion: 'b',trillion: 't'},ordinal: function(number) {var b = number % 10;return b === 1 || b === 3 ? 'er' : b === 2 ? 'do' : b === 7 || b === 0 ? 'mo' : b === 8 ? 'vo' : b === 9 ? 'no' : 'to';},currency: {symbol: '€'}
+},
+dayjs: {name: 'es',monthsShort: 'ene_feb_mar_abr_may_jun_jul_ago_sep_oct_nov_dic'.split('_'),weekdays: 'domingo_lunes_martes_miércoles_jueves_viernes_sábado'.split('_'),weekdaysShort: 'dom._lun._mar._mié._jue._vie._sáb.'.split('_'),weekdaysMin: 'do_lu_ma_mi_ju_vi_sá'.split('_'),months: 'Enero_Febrero_Marzo_Abril_Mayo_Junio_Julio_Agosto_Septiembre_Octubre_Noviembre_Diciembre'.split('_'),weekStart: 1,formats: {LT: 'H:mm',LTS: 'H:mm:ss',L: 'DD/MM/YYYY',LL: 'D [de] MMMM [de] YYYY',LLL: 'D [de] MMMM [de] YYYY H:mm',LLLL: 'dddd, D [de] MMMM [de] YYYY H:mm'},relativeTime: {future: 'en %s',past: 'hace %s',s: 'unos segundos',m: 'un minuto',mm: '%d minutos',h: 'una hora',hh: '%d horas',d: 'un día',dd: '%d días',M: 'un mes',MM: '%d meses',y: 'un año',yy: '%d años'},ordinal: function(n) {return n + 'º';}
+},},
+            metricPrefix: {"3":"k","6":"m","9":"b","12":"t"},
+            themeId: "datawrapper-extended-charset",
+            fontsJSON: {"RobotoBold":{"type":"font","files":{"eot":"\/\/static.dwcdn.net\/custom\/themes\/datawrapper-extended-charset\/Roboto-Bold.eot","svg":"\/\/static.dwcdn.net\/custom\/themes\/datawrapper-extended-charset\/Roboto-Bold.svg","ttf":"\/\/static.dwcdn.net\/custom\/themes\/datawrapper-extended-charset\/Roboto-Bold.ttf","woff":"\/\/static.dwcdn.net\/custom\/themes\/datawrapper-extended-charset\/Roboto-Bold.woff","woff2":"\/\/static.dwcdn.net\/custom\/themes\/datawrapper-extended-charset\/Roboto-Bold.woff2"},"method":"file"},"RobotoItalic":{"type":"font","files":{"eot":"\/\/static.dwcdn.net\/custom\/themes\/datawrapper-extended-charset\/Roboto-Italic.eot","svg":"\/\/static.dwcdn.net\/custom\/themes\/datawrapper-extended-charset\/Roboto-Italic.svg","ttf":"\/\/static.dwcdn.net\/custom\/themes\/datawrapper-extended-charset\/Roboto-Italic.ttf","woff":"\/\/static.dwcdn.net\/custom\/themes\/datawrapper-extended-charset\/Roboto-Italic.woff","woff2":"\/\/static.dwcdn.net\/custom\/themes\/datawrapper-extended-charset\/Roboto-Italic.woff2"},"method":"file"},"RobotoRegular":{"type":"font","files":{"eot":"\/\/static.dwcdn.net\/custom\/themes\/datawrapper-extended-charset\/Roboto-Regular.eot","svg":"\/\/static.dwcdn.net\/custom\/themes\/datawrapper-extended-charset\/Roboto-Regular.svg","ttf":"\/\/static.dwcdn.net\/custom\/themes\/datawrapper-extended-charset\/Roboto-Regular.ttf","woff":"\/\/static.dwcdn.net\/custom\/themes\/datawrapper-extended-charset\/Roboto-Regular.woff","woff2":"\/\/static.dwcdn.net\/custom\/themes\/datawrapper-extended-charset\/Roboto-Regular.woff2"},"method":"file"},"RobotoBoldItalic":{"type":"font","files":{"eot":"\/\/static.dwcdn.net\/custom\/themes\/datawrapper-extended-charset\/Roboto-BoldItalic.eot","svg":"\/\/static.dwcdn.net\/custom\/themes\/datawrapper-extended-charset\/Roboto-BoldItalic.svg","ttf":"\/\/static.dwcdn.net\/custom\/themes\/datawrapper-extended-charset\/Roboto-BoldItalic.ttf","woff":"\/\/static.dwcdn.net\/custom\/themes\/datawrapper-extended-charset\/Roboto-BoldItalic.woff","woff2":"\/\/static.dwcdn.net\/custom\/themes\/datawrapper-extended-charset\/Roboto-BoldItalic.woff2"},"method":"file"},"Roboto":{"type":"font","import":"https:\/\/static.dwcdn.net\/css\/roboto.css","method":"import"}},
+            typographyJSON: {"chart":{"typeface":"Roboto,sans-serif","color":"#181818","fontSize":12},"headline":{"fontSize":22,"fontWeight":"bold","underlined":0,"cursive":0,"color":"#000000","typeface":"Roboto,sans-serif"},"description":{"fontSize":14,"lineHeight":17,"fontWeight":"normal","underlined":0,"cursive":0,"typeface":"Roboto,sans-serif"},"notes":{"fontSize":12,"fontWeight":"normal","underlined":0,"cursive":1,"color":"#656565","typeface":"Roboto,sans-serif"},"footer":{"color":"#888","fontSize":11,"fontWeight":"normal","underlined":0,"cursive":0,"typeface":"Roboto,sans-serif"},"links":{"color":"#0088CC","fontWeight":"normal","underlined":0,"cursive":0,"typeface":"Roboto,sans-serif"}},
+            templateJS: false
+        });
+
+    })();
+
+    </script>
+
+
+
+<img style="float: right;" src="a_data_007/datawrapper.gif" width="1" height="1"></body></html>
