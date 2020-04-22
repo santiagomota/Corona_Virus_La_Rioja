@@ -9,3 +9,5 @@ Repositorio de datos de fuentes oficiales
 ## Gobierno de La Rioja
 
 [https://actualidad.larioja.org/coronavirus](https://actualidad.larioja.org/coronavirus)
+
+[https://actualidad.larioja.org/coronavirus/datos](https://actualidad.larioja.org/coronavirus/datos)
