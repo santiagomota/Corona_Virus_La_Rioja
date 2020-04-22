@@ -1,0 +1,1523 @@
+<!DOCTYPE html>
+<html><head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>Mapa</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.95, maximum-scale=0.95, user-scalable=0">
+    <script type="text/javascript">
+    if (window.parent && window.parent.postMessage) {
+        window.parent.postMessage('datawrapper:vis:reload', '*');
+    }
+    </script>
+            <!--[if lt IE 9]>
+    <script src="/static/vendor/json-js/json2.min.js"></script>
+    <script type="text/javascript">
+        window.__ltie9 = true;
+    </script>
+    <![endif]-->
+    
+        <link rel="alternate" type="application/json+oembed" href="https://app.datawrapper.de/api/plugin/oembed?url=%2F%2Fdatawrapper.dwcdn.net%2FjZusx%2F19%2F&amp;format=json" title="Mapa">
+
+
+    <script type="text/javascript" charset="utf-8">
+    window.__locale = 'es-ES';
+    </script>
+
+      <script type="text/javascript" charset="utf-8" src="a_data_008/underscore-min.js"></script>
+        <script type="text/javascript" charset="utf-8" src="a_data_008/globalize_002.js"></script>
+        <script type="text/javascript" charset="utf-8" src="a_data_008/globalize.js"></script>
+        <script type="text/javascript" charset="utf-8" src="a_data_008/jquery.js"></script>
+        <script type="text/javascript" charset="utf-8" src="a_data_008/mapbox-gl.js"></script>
+        <script type="text/javascript" charset="utf-8" src="a_data_008/locator-map-7603b00a8c6537ca6ae4d434803e2341.js"></script>
+        <script type="text/javascript" charset="utf-8" src="a_data_008/chart-61e2c71412141871942c0de6c1051c69ca80e945.js"></script>
+  
+    <script type="text/javascript">
+        (function() {
+            dw.theme.register('datawrapper-data', {"typography":{"chart":{"typeface":"Roboto,sans-serif","color":"#181818","fontSize":12},"headline":{"fontSize":22,"fontWeight":"bold","underlined":0,"cursive":0,"color":"#000000","typeface":"Roboto,sans-serif"},"description":{"fontSize":14,"lineHeight":17,"fontWeight":"normal","underlined":0,"cursive":0,"typeface":"Roboto,sans-serif"},"notes":{"fontSize":12,"fontWeight":"normal","underlined":0,"cursive":1,"color":"#656565","typeface":"Roboto,sans-serif"},"footer":{"color":"#888","fontSize":11,"fontWeight":"normal","underlined":0,"cursive":0,"typeface":"Roboto,sans-serif"},"links":{"color":"#18a1cd","fontWeight":"normal","underlined":0,"cursive":0,"typeface":"Roboto,sans-serif"}},"colors":{"general":{"background":"transparent","padding":0},"palette":["#18a1cd","#1d81a2","#15607a","#82f5cf","#00dca6","#09bb9f","#c4c4c4","#c71e1d","#fa8c00","#ffca76","#ffe59c"],"picker":{"rowCount":6}},"options":{"footer":{"logo":{"enabled":0,"height":30,"position":"right"},"getTheData":{"enabled":1,"caption":"Descargar\u00a0los datos"},"embed":{"enabled":0,"caption":"Insertar"},"staticImage":{"enabled":0,"caption":"Descargar la imagen"},"createdWithDatawrapper":1,"sourcePosition":"left","sourceCaption":"Fuente","chartCaption":"Gr\u00e1fico:","createdWithCaption":"Creado con","mapCaption":"Mapa:","tableCaption":"Tabla:","forkCaption":"Based on"}},"pdf":{"fonts":{"Roboto Bold":"https:\/\/static.dwcdn.net\/css\/fonts\/roboto\/ttf\/Roboto-Bold.ttf","Roboto Light":"https:\/\/static.dwcdn.net\/css\/fonts\/roboto\/ttf\/Roboto-Light.ttf","Roboto Medium":"https:\/\/static.dwcdn.net\/css\/fonts\/roboto\/ttf\/Roboto-Medium.ttf","Roboto Regular":"https:\/\/static.dwcdn.net\/css\/fonts\/roboto\/ttf\/Roboto-Regular.ttf","Roboto Bold Italic":"https:\/\/static.dwcdn.net\/css\/fonts\/roboto\/ttf\/Roboto-BoldItalic.ttf","Roboto Light Italic":"https:\/\/static.dwcdn.net\/css\/fonts\/roboto\/ttf\/Roboto-LightItalic.ttf","Roboto Medium Italic":"https:\/\/static.dwcdn.net\/css\/fonts\/roboto\/ttf\/Roboto-MediumItalic.ttf","Roboto Regular Italic":"https:\/\/static.dwcdn.net\/css\/fonts\/roboto\/ttf\/Roboto-Italic.ttf"},"fontStack":true,"cmykColors":[],"defaultFont":"Roboto Regular"},"vis":{"d3-maps-symbols":{"regionFill":"#ededed"}}});
+        }).call(this);
+    </script>
+
+
+    <style type="text/css">
+        @import 'https://static.dwcdn.net/css/roboto.css';
+.chart {
+  font-family: Roboto,sans-serif;
+  color: #181818;
+  font-size: 12px;
+  background: transparent;
+  margin: 0 0px;
+  height: 100%;
+}
+.chart.vis-height-fit {
+  overflow: hidden;
+}
+.chart a {
+  color: #18a1cd;
+  text-decoration: none;
+}
+.chart .dw-chart-header {
+  min-height: 1px;
+  position: relative;
+  overflow: auto;
+}
+.chart .dw-chart-header .header-right {
+  position: absolute;
+  right: 10px;
+  z-index: 20;
+}
+.chart .dw-chart-header h1 {
+  font-family: Roboto,sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+  font-style: normal;
+  text-decoration: none;
+  color: #000000;
+  margin: 0 0 10px;
+}
+.chart .dw-chart-header p {
+  font-family: Roboto,sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  font-style: normal;
+  text-decoration: none;
+  margin: 5px 0 10px !important;
+}
+.chart .dw-chart-body.dark-bg .label span {
+  color: #181818;
+  fill: #181818;
+}
+.chart .dw-chart-body .bc-grid-line {
+  border-left-style: solid;
+}
+.chart .dw-chart-body.content-below-chart {
+  margin: 0px 0px 20px 0px;
+}
+.chart .labels text {
+  font-size: 12px;
+}
+.chart .label {
+  font-size: 12px;
+}
+.chart .label span,
+.chart .label tspan {
+  color: #181818;
+  fill: #181818;
+}
+.chart .label.inverted span {
+  text-shadow: 0 0px 2px #000000;
+  color: #ffffff;
+}
+.chart .label.inside:not(.inverted) span {
+  text-shadow: 0 0px 2px #ffffff;
+  color: #333333;
+}
+.chart .label sup {
+  text-shadow: none;
+}
+.chart .label.highlighted {
+  font-weight: bold;
+}
+.chart .label.highlighted,
+.chart .label .label.axis {
+  font-size: 12px;
+  z-index: 100;
+}
+.chart .label.hover {
+  font-weight: bold;
+}
+.chart .label.smaller span {
+  font-size: 80%;
+}
+.chart .dw-chart-notes {
+  font-family: Roboto,sans-serif;
+  font-weight: normal;
+  font-size: 12px;
+  font-style: italic;
+  text-decoration: none;
+  color: #656565;
+  margin: 0px 0px 5px 0px;
+  position: relative;
+}
+.chart #footer,
+.chart .dw-chart-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Roboto,sans-serif;
+  font-weight: normal;
+  font-size: 11px;
+  font-style: normal;
+  text-decoration: none;
+  color: #888;
+}
+.chart #footer > div > .footer-block,
+.chart .dw-chart-footer > div > .footer-block {
+  display: inline-block;
+}
+.chart #footer > div > .footer-block.hidden,
+.chart .dw-chart-footer > div > .footer-block.hidden {
+  display: none;
+}
+.chart #footer > div > .footer-block a[href=""],
+.chart .dw-chart-footer > div > .footer-block a[href=""] {
+  color: #888;
+  pointer-events: none;
+  text-decoration: none;
+  padding: 0;
+  border-bottom: 0;
+}
+.chart #footer > div > .footer-block .separator,
+.chart .dw-chart-footer > div > .footer-block .separator {
+  display: inline-block;
+  font-style: initial;
+}
+.chart #footer > div > .footer-block .separator:before,
+.chart .dw-chart-footer > div > .footer-block .separator:before {
+  content: "•";
+  display: inline-block;
+}
+.chart #footer > div .footer-block.hidden:first-child + .footer-block:not(.hidden) .separator,
+.chart #footer > div .footer-block.hidden:first-child
+              + .footer-block.hidden
+              + .footer-block:not(.hidden) .separator,
+.chart #footer > div .footer-block.hidden:first-child
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block:not(.hidden) .separator,
+.chart #footer > div .footer-block.hidden:first-child
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block:not(.hidden) .separator,
+.chart #footer > div .footer-block.hidden:first-child
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block:not(.hidden) .separator,
+.chart #footer > div .footer-block.hidden:first-child
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block:not(.hidden) .separator,
+.chart .dw-chart-footer > div .footer-block.hidden:first-child + .footer-block:not(.hidden) .separator,
+.chart .dw-chart-footer > div .footer-block.hidden:first-child
+              + .footer-block.hidden
+              + .footer-block:not(.hidden) .separator,
+.chart .dw-chart-footer > div .footer-block.hidden:first-child
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block:not(.hidden) .separator,
+.chart .dw-chart-footer > div .footer-block.hidden:first-child
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block:not(.hidden) .separator,
+.chart .dw-chart-footer > div .footer-block.hidden:first-child
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block:not(.hidden) .separator,
+.chart .dw-chart-footer > div .footer-block.hidden:first-child
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block.hidden
+              + .footer-block:not(.hidden) .separator {
+  display: none;
+}
+.chart #footer > div > a:first-child::before,
+.chart #footer > div > .source-block:first-child::before,
+.chart #footer > div > .footer-block:first-child::before,
+.chart .dw-chart-footer > div > a:first-child::before,
+.chart .dw-chart-footer > div > .source-block:first-child::before,
+.chart .dw-chart-footer > div > .footer-block:first-child::before {
+  content: "";
+  display: none;
+}
+.chart .dw-chart-notes a,
+.chart .dw-chart-footer a {
+  font-family: Roboto,sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  color: #18a1cd;
+}
+.chart a img {
+  border: 0px;
+}
+.chart .embed-code {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  padding: 15px;
+  background: #eee;
+  color: #000;
+  border-radius: 6px;
+  text-transform: none;
+  font-size: 1em;
+  box-shadow: 2px 2px 0px rgba(0,0,0,0.4);
+  z-index: 10;
+}
+.chart .embed-code textarea {
+  width: 90%;
+  margin-top: 2%;
+  height: 7em;
+}
+.chart .hide {
+  display: none;
+}
+.chart .embed-code .close {
+  cursor: pointer;
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  font-size: 1.125em;
+  opacity: 0.7;
+}
+.chart .embed-code .close:hover {
+  opacity: 1;
+}
+.chart .dw-tooltip {
+  color: #333333;
+}
+.chart .tooltip {
+  z-index: 200;
+  padding-bottom: 0px;
+}
+.chart .tooltip .content {
+  background-color: #fff;
+  border: 1px solid #888;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+  padding: 5px 8px;
+}
+.chart .tooltip label {
+  font-weight: 700;
+}
+.chart .tooltip label:after {
+  content: ": ";
+}
+.chart .logo {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.chart .logo .big {
+  display: none;
+}
+.chart svg .axis,
+.chart svg .tick,
+.chart svg .grid,
+.chart svg rect {
+  shape-rendering: crispEdges;
+}
+.chart .filter-links {
+  height: 30px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  border-bottom: 1px solid #ccc;
+  font-size: 12px;
+}
+.chart .filter-links a {
+  color: #666;
+  height: 28px;
+  line-height: 28px;
+  padding: 10px;
+  text-decoration: none;
+}
+.chart .filter-links a:hover {
+  color: #222;
+}
+.chart .filter-links a.active {
+  font-weight: bold;
+  color: #000;
+  box-shadow: none;
+  cursor: default;
+  text-decoration: none;
+  border-bottom: 3px solid #555;
+  padding: 10px 10px 6px 10px;
+}
+.chart .filter-select {
+  background-color: #FFFFFF;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px 4px 4px 4px;
+  padding: 4px 6px;
+  vertical-align: middle;
+  font-size: 12px;
+}
+.chart.plain #footer {
+  height: 10px;
+}
+.chart.js .noscript {
+  display: none;
+}
+.chart .hidden {
+  display: none;
+}
+.chart .label.annotation span {
+  background: transparent;
+}
+.chart .legend-item.hover .label {
+  font-weight: bold;
+}
+.chart .watermark {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  transform-origin: top left;
+  opacity: 0.182;
+  font-weight: bold;
+  font-size: 6px;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+.clearfix {
+  display: inline-block;
+}
+html[xmlns] .clearfix {
+  display: block;
+}
+* html .clearfix {
+  height: 1%;
+}
+.point {
+  border: 1px solid #ccc;
+  display: inline-block;
+  position: absolute;
+  background: #fff;
+  z-index: 100;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  top: 20px;
+}
+.point:hover {
+  background: #ebebeb;
+}
+.point.active {
+  background: #ccc;
+  height: 20px;
+  width: 20px;
+  border-radius: 20px;
+  top: 20px;
+  border-color: #888;
+}
+.point-label {
+  position: absolute;
+}
+.line {
+  height: 1px;
+  background: #ccc;
+  position: absolute;
+  left: 0px;
+  top: 30px;
+  z-index: 1;
+}
+.vis-pie-chart path,
+.vis-donut-chart path,
+.vis-election-donut-chart path {
+  stroke-width: 0.5;
+}
+.mapboxgl-map {
+  overflow: hidden;
+  position: relative;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  text-align: left;
+}
+.mapboxgl-map:-webkit-full-screen {
+  width: 100%;
+  height: 100%;
+}
+.mapboxgl-canary {
+  background-color: salmon;
+}
+.mapboxgl-canvas-container.mapboxgl-interactive,
+.mapboxgl-ctrl-group > button.mapboxgl-ctrl-compass {
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+  cursor: grab;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.mapboxgl-canvas-container.mapboxgl-interactive.mapboxgl-track-pointer {
+  cursor: pointer;
+}
+.mapboxgl-canvas-container.mapboxgl-interactive:active,
+.mapboxgl-ctrl-group > button.mapboxgl-ctrl-compass:active {
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+  cursor: grabbing;
+}
+.mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate,
+.mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate .mapboxgl-canvas {
+  touch-action: pan-x pan-y;
+}
+.mapboxgl-canvas-container.mapboxgl-touch-drag-pan,
+.mapboxgl-canvas-container.mapboxgl-touch-drag-pan .mapboxgl-canvas {
+  touch-action: pinch-zoom;
+}
+.mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan,
+.mapboxgl-canvas-container.mapboxgl-touch-zoom-rotate.mapboxgl-touch-drag-pan .mapboxgl-canvas {
+  touch-action: none;
+}
+.mapboxgl-ctrl-top-left,
+.mapboxgl-ctrl-top-right,
+.mapboxgl-ctrl-bottom-left,
+.mapboxgl-ctrl-bottom-right {
+  position: absolute;
+  pointer-events: none;
+  z-index: 2;
+}
+.mapboxgl-ctrl-top-left {
+  top: 0;
+  left: 0;
+}
+.mapboxgl-ctrl-top-right {
+  top: 0;
+  right: 0;
+}
+.mapboxgl-ctrl-bottom-left {
+  bottom: 0;
+  left: 0;
+}
+.mapboxgl-ctrl-bottom-right {
+  right: 0;
+  bottom: 0;
+}
+.mapboxgl-ctrl {
+  clear: both;
+  pointer-events: auto;
+  transform: translate(0,0);
+}
+.mapboxgl-ctrl-top-left .mapboxgl-ctrl {
+  margin: 10px 0 0 10px;
+  float: left;
+}
+.mapboxgl-ctrl-top-right .mapboxgl-ctrl {
+  margin: 10px 10px 0 0;
+  float: right;
+}
+.mapboxgl-ctrl-bottom-left .mapboxgl-ctrl {
+  margin: 0 0 10px 10px;
+  float: left;
+}
+.mapboxgl-ctrl-bottom-right .mapboxgl-ctrl {
+  margin: 0 10px 10px 0;
+  float: right;
+}
+.mapboxgl-ctrl-group {
+  border-radius: 4px;
+  background: #fff;
+}
+.mapboxgl-ctrl-group:not(:empty) {
+  -moz-box-shadow: 0 0 2px rgba(0,0,0,0.1);
+  -webkit-box-shadow: 0 0 2px rgba(0,0,0,0.1);
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+}
+.mapboxgl-ctrl-group > button {
+  width: 30px;
+  height: 30px;
+  display: block;
+  padding: 0;
+  outline: none;
+  border: 0;
+  box-sizing: border-box;
+  background-color: transparent;
+  cursor: pointer;
+}
+.mapboxgl-ctrl-group > button + button {
+  border-top: 1px solid #ddd;
+}
+.mapboxgl-ctrl > button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+.mapboxgl-ctrl-group > button:focus {
+  box-shadow: 0 0 2px 2px #0096ff;
+}
+.mapboxgl-ctrl > button:not(:disabled):hover {
+  background-color: rgba(0,0,0,0.05);
+}
+.mapboxgl-ctrl-group > button:focus:focus-visible {
+  box-shadow: 0 0 2px 2px #0096ff;
+}
+.mapboxgl-ctrl-group > button:focus:not(:focus-visible) {
+  box-shadow: none;
+}
+.mapboxgl-ctrl-group > button:focus:first-child {
+  border-radius: 4px 4px 0 0;
+}
+.mapboxgl-ctrl-group > button:focus:last-child {
+  border-radius: 0 0 4px 4px;
+}
+.mapboxgl-ctrl-group > button:focus:only-child {
+  border-radius: inherit;
+}
+.mapboxgl-ctrl-icon,
+.mapboxgl-ctrl-icon > .mapboxgl-ctrl-compass-arrow {
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.mapboxgl-ctrl-icon {
+  padding: 5px;
+}
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-icon-disabled {
+  opacity: 0.25;
+  border-color: #373737;
+}
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-zoom-out {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath style='fill:%23333333;' d='m 7,9 c -0.554,0 -1,0.446 -1,1 0,0.554 0.446,1 1,1 l 6,0 c 0.554,0 1,-0.446 1,-1 0,-0.554 -0.446,-1 -1,-1 z'/%3E %3C/svg%3E");
+}
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-zoom-in {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath style='fill:%23333333;' d='M 10 6 C 9.446 6 9 6.4459904 9 7 L 9 9 L 7 9 C 6.446 9 6 9.446 6 10 C 6 10.554 6.446 11 7 11 L 9 11 L 9 13 C 9 13.55401 9.446 14 10 14 C 10.554 14 11 13.55401 11 13 L 11 11 L 13 11 C 13.554 11 14 10.554 14 10 C 14 9.446 13.554 9 13 9 L 11 9 L 11 7 C 11 6.4459904 10.554 6 10 6 z'/%3E %3C/svg%3E");
+}
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-geolocate::before {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg' fill='%23333'%3E %3Cpath d='M10 4C9 4 9 5 9 5L9 5.1A5 5 0 0 0 5.1 9L5 9C5 9 4 9 4 10 4 11 5 11 5 11L5.1 11A5 5 0 0 0 9 14.9L9 15C9 15 9 16 10 16 11 16 11 15 11 15L11 14.9A5 5 0 0 0 14.9 11L15 11C15 11 16 11 16 10 16 9 15 9 15 9L14.9 9A5 5 0 0 0 11 5.1L11 5C11 5 11 4 10 4zM10 6.5A3.5 3.5 0 0 1 13.5 10 3.5 3.5 0 0 1 10 13.5 3.5 3.5 0 0 1 6.5 10 3.5 3.5 0 0 1 10 6.5zM10 8.3A1.8 1.8 0 0 0 8.3 10 1.8 1.8 0 0 0 10 11.8 1.8 1.8 0 0 0 11.8 10 1.8 1.8 0 0 0 10 8.3z'/%3E %3C/svg%3E");
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-geolocate:disabled::before {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg' fill='%23aaa'%3E %3Cpath d='M14.434,7.688c0.213,0.407 0.371,0.848 0.466,1.312l0.1,0c0,0 1,0 1,1c0,1 -1,1 -1,1l-0.1,0c-0.4,1.96 -1.94,3.5 -3.9,3.9l0,0.1c0,0 0,1 -1,1c-1,0 -1,-1 -1,-1l0,-0.1c-0.477,-0.097 -0.93,-0.262 -1.347,-0.484c0.383,-0.377 0.767,-0.753 1.151,-1.129c0.374,0.138 0.777,0.213 1.196,0.213c1.92,0 3.5,-1.58 3.5,-3.5c0,-0.403 -0.07,-0.791 -0.197,-1.153c0.379,-0.384 0.756,-0.77 1.131,-1.159Zm-9.334,1.312c0.4,-1.961 1.94,-3.5 3.9,-3.9l0,-0.1c0,0 0,-1 1,-1c1,0 1,1 1,1l0,0.1c0.477,0.097 0.93,0.262 1.347,0.484c-0.383,0.377 -0.767,0.753 -1.151,1.129c-0.374,-0.138 -0.777,-0.213 -1.196,-0.213c-1.92,0 -3.5,1.58 -3.5,3.5c0,0.403 0.07,0.791 0.197,1.153c-0.379,0.384 -0.756,0.77 -1.131,1.159c-0.213,-0.407 -0.371,-0.848 -0.466,-1.312l-0.1,0c-0.005,0 -1,-0.003 -1,-1c0,-0.997 0.995,-1 1,-1l0.1,0Z'/%3E %3Cpath d='M14,5l1,1l-9,9l-1,-1l9,-9Z'/%3E %3C/svg%3E");
+}
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-geolocate.mapboxgl-ctrl-geolocate-active::before {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg' fill='%2333b5e5'%3E %3Cpath d='M10 4C9 4 9 5 9 5L9 5.1A5 5 0 0 0 5.1 9L5 9C5 9 4 9 4 10 4 11 5 11 5 11L5.1 11A5 5 0 0 0 9 14.9L9 15C9 15 9 16 10 16 11 16 11 15 11 15L11 14.9A5 5 0 0 0 14.9 11L15 11C15 11 16 11 16 10 16 9 15 9 15 9L14.9 9A5 5 0 0 0 11 5.1L11 5C11 5 11 4 10 4zM10 6.5A3.5 3.5 0 0 1 13.5 10 3.5 3.5 0 0 1 10 13.5 3.5 3.5 0 0 1 6.5 10 3.5 3.5 0 0 1 10 6.5zM10 8.3A1.8 1.8 0 0 0 8.3 10 1.8 1.8 0 0 0 10 11.8 1.8 1.8 0 0 0 11.8 10 1.8 1.8 0 0 0 10 8.3z'/%3E %3C/svg%3E");
+}
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-geolocate.mapboxgl-ctrl-geolocate-active-error::before {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg' fill='%23e58978'%3E %3Cpath d='M10 4C9 4 9 5 9 5L9 5.1A5 5 0 0 0 5.1 9L5 9C5 9 4 9 4 10 4 11 5 11 5 11L5.1 11A5 5 0 0 0 9 14.9L9 15C9 15 9 16 10 16 11 16 11 15 11 15L11 14.9A5 5 0 0 0 14.9 11L15 11C15 11 16 11 16 10 16 9 15 9 15 9L14.9 9A5 5 0 0 0 11 5.1L11 5C11 5 11 4 10 4zM10 6.5A3.5 3.5 0 0 1 13.5 10 3.5 3.5 0 0 1 10 13.5 3.5 3.5 0 0 1 6.5 10 3.5 3.5 0 0 1 10 6.5zM10 8.3A1.8 1.8 0 0 0 8.3 10 1.8 1.8 0 0 0 10 11.8 1.8 1.8 0 0 0 11.8 10 1.8 1.8 0 0 0 10 8.3z'/%3E %3C/svg%3E");
+}
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-geolocate.mapboxgl-ctrl-geolocate-background::before {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg' fill='%2333b5e5'%3E %3Cpath d='M 10,4 C 9,4 9,5 9,5 L 9,5.1 C 7.0357113,5.5006048 5.5006048,7.0357113 5.1,9 L 5,9 c 0,0 -1,0 -1,1 0,1 1,1 1,1 l 0.1,0 c 0.4006048,1.964289 1.9357113,3.499395 3.9,3.9 L 9,15 c 0,0 0,1 1,1 1,0 1,-1 1,-1 l 0,-0.1 c 1.964289,-0.400605 3.499395,-1.935711 3.9,-3.9 l 0.1,0 c 0,0 1,0 1,-1 C 16,9 15,9 15,9 L 14.9,9 C 14.499395,7.0357113 12.964289,5.5006048 11,5.1 L 11,5 c 0,0 0,-1 -1,-1 z m 0,2.5 c 1.932997,0 3.5,1.5670034 3.5,3.5 0,1.932997 -1.567003,3.5 -3.5,3.5 C 8.0670034,13.5 6.5,11.932997 6.5,10 6.5,8.0670034 8.0670034,6.5 10,6.5 Z'/%3E %3C/svg%3E");
+}
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-geolocate.mapboxgl-ctrl-geolocate-background-error::before {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg' fill='%23e54e33'%3E %3Cpath d='M 10,4 C 9,4 9,5 9,5 L 9,5.1 C 7.0357113,5.5006048 5.5006048,7.0357113 5.1,9 L 5,9 c 0,0 -1,0 -1,1 0,1 1,1 1,1 l 0.1,0 c 0.4006048,1.964289 1.9357113,3.499395 3.9,3.9 L 9,15 c 0,0 0,1 1,1 1,0 1,-1 1,-1 l 0,-0.1 c 1.964289,-0.400605 3.499395,-1.935711 3.9,-3.9 l 0.1,0 c 0,0 1,0 1,-1 C 16,9 15,9 15,9 L 14.9,9 C 14.499395,7.0357113 12.964289,5.5006048 11,5.1 L 11,5 c 0,0 0,-1 -1,-1 z m 0,2.5 c 1.932997,0 3.5,1.5670034 3.5,3.5 0,1.932997 -1.567003,3.5 -3.5,3.5 C 8.0670034,13.5 6.5,11.932997 6.5,10 6.5,8.0670034 8.0670034,6.5 10,6.5 Z'/%3E %3C/svg%3E");
+}
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-geolocate.mapboxgl-ctrl-geolocate-waiting::before {
+  -webkit-animation: mapboxgl-spin 2s infinite linear;
+  -moz-animation: mapboxgl-spin 2s infinite linear;
+  -o-animation: mapboxgl-spin 2s infinite linear;
+  -ms-animation: mapboxgl-spin 2s infinite linear;
+  animation: mapboxgl-spin 2s infinite linear;
+}
+@-webkit-keyframes mapboxgl-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes mapboxgl-spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-o-keyframes mapboxgl-spin {
+  0% {
+    -o-transform: rotate(0deg);
+  }
+  100% {
+    -o-transform: rotate(360deg);
+  }
+}
+@-ms-keyframes mapboxgl-spin {
+  0% {
+    -ms-transform: rotate(0deg);
+  }
+  100% {
+    -ms-transform: rotate(360deg);
+  }
+}
+@keyframes mapboxgl-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-fullscreen {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath d='M 5 4 C 4.5 4 4 4.5 4 5 L 4 6 L 4 9 L 4.5 9 L 5.7773438 7.296875 C 6.7771319 8.0602131 7.835765 8.9565728 8.890625 10 C 7.8257121 11.0633 6.7761791 11.951675 5.78125 12.707031 L 4.5 11 L 4 11 L 4 15 C 4 15.5 4.5 16 5 16 L 9 16 L 9 15.5 L 7.2734375 14.205078 C 8.0428931 13.187886 8.9395441 12.133481 9.9609375 11.068359 C 11.042371 12.14699 11.942093 13.2112 12.707031 14.21875 L 11 15.5 L 11 16 L 14 16 L 15 16 C 15.5 16 16 15.5 16 15 L 16 14 L 16 11 L 15.5 11 L 14.205078 12.726562 C 13.177985 11.949617 12.112718 11.043577 11.037109 10.009766 C 12.151856 8.981061 13.224345 8.0798624 14.228516 7.3046875 L 15.5 9 L 16 9 L 16 5 C 16 4.5 15.5 4 15 4 L 11 4 L 11 4.5 L 12.703125 5.7773438 C 11.932647 6.7864834 11.026693 7.8554712 9.9707031 8.9199219 C 8.9584739 7.8204943 8.0698767 6.7627188 7.3046875 5.7714844 L 9 4.5 L 9 4 L 6 4 L 5 4 z '/%3E %3C/svg%3E");
+}
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-shrink {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath style='fill:%23000000;' d='M 4.2421875 3.4921875 A 0.750075 0.750075 0 0 0 3.71875 4.78125 L 5.9648438 7.0273438 L 4 8.5 L 4 9 L 8 9 C 8.500001 8.9999988 9 8.4999992 9 8 L 9 4 L 8.5 4 L 7.0175781 5.9550781 L 4.78125 3.71875 A 0.750075 0.750075 0 0 0 4.2421875 3.4921875 z M 15.734375 3.4921875 A 0.750075 0.750075 0 0 0 15.21875 3.71875 L 12.984375 5.953125 L 11.5 4 L 11 4 L 11 8 C 11 8.4999992 11.499999 8.9999988 12 9 L 16 9 L 16 8.5 L 14.035156 7.0273438 L 16.28125 4.78125 A 0.750075 0.750075 0 0 0 15.734375 3.4921875 z M 4 11 L 4 11.5 L 5.9648438 12.972656 L 3.71875 15.21875 A 0.75130096 0.75130096 0 1 0 4.78125 16.28125 L 7.0273438 14.035156 L 8.5 16 L 9 16 L 9 12 C 9 11.500001 8.500001 11.000001 8 11 L 4 11 z M 12 11 C 11.499999 11.000001 11 11.500001 11 12 L 11 16 L 11.5 16 L 12.972656 14.035156 L 15.21875 16.28125 A 0.75130096 0.75130096 0 1 0 16.28125 15.21875 L 14.035156 12.972656 L 16 11.5 L 16 11 L 12 11 z '/%3E %3C/svg%3E");
+}
+.mapboxgl-ctrl-icon.mapboxgl-ctrl-compass > .mapboxgl-ctrl-compass-arrow {
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E %3Cpolygon fill='%23333333' points='6,9 10,1 14,9'/%3E %3Cpolygon fill='%23CCCCCC' points='6,11 10,19 14,11 '/%3E %3C/svg%3E");
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+a.mapboxgl-ctrl-logo {
+  width: 85px;
+  height: 21px;
+  margin: 0 0 -3px -3px;
+  display: block;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E%3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 84.49 21' style='enable-background:new 0 0 84.49 21;' xml:space='preserve'%3E%3Cg%3E %3Cpath class='st0' style='opacity:0.9; fill: %23FFFFFF; enable-background: new;' d='M83.25,14.26c0,0.12-0.09,0.21-0.21,0.21h-1.61c-0.13,0-0.24-0.06-0.3-0.17l-1.44-2.39l-1.44,2.39 c-0.06,0.11-0.18,0.17-0.3,0.17h-1.61c-0.04,0-0.08-0.01-0.12-0.03c-0.09-0.06-0.13-0.19-0.06-0.28l0,0l2.43-3.68L76.2,6.84 c-0.02-0.03-0.03-0.07-0.03-0.12c0-0.12,0.09-0.21,0.21-0.21h1.61c0.13,0,0.24,0.06,0.3,0.17l1.41,2.36l1.4-2.35 c0.06-0.11,0.18-0.17,0.3-0.17H83c0.04,0,0.08,0.01,0.12,0.03c0.09,0.06,0.13,0.19,0.06,0.28l0,0l-2.37,3.63l2.43,3.67 C83.24,14.18,83.25,14.22,83.25,14.26z'/%3E %3Cpath class='st0' style='opacity:0.9; fill: %23FFFFFF; enable-background: new;' d='M66.24,9.59c-0.39-1.88-1.96-3.28-3.84-3.28c-1.03,0-2.03,0.42-2.73,1.18V3.51c0-0.13-0.1-0.23-0.23-0.23h-1.4 c-0.13,0-0.23,0.11-0.23,0.23v10.72c0,0.13,0.1,0.23,0.23,0.23h1.4c0.13,0,0.23-0.11,0.23-0.23V13.5c0.71,0.75,1.7,1.18,2.73,1.18 c1.88,0,3.45-1.41,3.84-3.29C66.37,10.79,66.37,10.18,66.24,9.59L66.24,9.59z M62.08,13c-1.32,0-2.39-1.11-2.41-2.48v-0.06 c0.02-1.38,1.09-2.48,2.41-2.48s2.42,1.12,2.42,2.51S63.41,13,62.08,13z'/%3E %3Cpath class='st0' style='opacity:0.9; fill: %23FFFFFF; enable-background: new;' d='M71.67,6.32c-1.98-0.01-3.72,1.35-4.16,3.29c-0.13,0.59-0.13,1.19,0,1.77c0.44,1.94,2.17,3.32,4.17,3.3 c2.35,0,4.26-1.87,4.26-4.19S74.04,6.32,71.67,6.32z M71.65,13.01c-1.33,0-2.42-1.12-2.42-2.51s1.08-2.52,2.42-2.52 c1.33,0,2.42,1.12,2.42,2.51S72.99,13,71.65,13.01L71.65,13.01z'/%3E %3Cpath class='st1' style='opacity:0.35; enable-background:new;' d='M62.08,7.98c-1.32,0-2.39,1.11-2.41,2.48v0.06C59.68,11.9,60.75,13,62.08,13s2.42-1.12,2.42-2.51 S63.41,7.98,62.08,7.98z M62.08,11.76c-0.63,0-1.14-0.56-1.17-1.25v-0.04c0.01-0.69,0.54-1.25,1.17-1.25 c0.63,0,1.17,0.57,1.17,1.27C63.24,11.2,62.73,11.76,62.08,11.76z'/%3E %3Cpath class='st1' style='opacity:0.35; enable-background:new;' d='M71.65,7.98c-1.33,0-2.42,1.12-2.42,2.51S70.32,13,71.65,13s2.42-1.12,2.42-2.51S72.99,7.98,71.65,7.98z M71.65,11.76c-0.64,0-1.17-0.57-1.17-1.27c0-0.7,0.53-1.26,1.17-1.26s1.17,0.57,1.17,1.27C72.82,11.21,72.29,11.76,71.65,11.76z'/%3E %3Cpath class='st0' style='opacity:0.9; fill: %23FFFFFF; enable-background: new;' d='M45.74,6.53h-1.4c-0.13,0-0.23,0.11-0.23,0.23v0.73c-0.71-0.75-1.7-1.18-2.73-1.18 c-2.17,0-3.94,1.87-3.94,4.19s1.77,4.19,3.94,4.19c1.04,0,2.03-0.43,2.73-1.19v0.73c0,0.13,0.1,0.23,0.23,0.23h1.4 c0.13,0,0.23-0.11,0.23-0.23V6.74c0-0.12-0.09-0.22-0.22-0.22C45.75,6.53,45.75,6.53,45.74,6.53z M44.12,10.53 C44.11,11.9,43.03,13,41.71,13s-2.42-1.12-2.42-2.51s1.08-2.52,2.4-2.52c1.33,0,2.39,1.11,2.41,2.48L44.12,10.53z'/%3E %3Cpath class='st1' style='opacity:0.35; enable-background:new;' d='M41.71,7.98c-1.33,0-2.42,1.12-2.42,2.51S40.37,13,41.71,13s2.39-1.11,2.41-2.48v-0.06 C44.1,9.09,43.03,7.98,41.71,7.98z M40.55,10.49c0-0.7,0.52-1.27,1.17-1.27c0.64,0,1.14,0.56,1.17,1.25v0.04 c-0.01,0.68-0.53,1.24-1.17,1.24C41.08,11.75,40.55,11.19,40.55,10.49z'/%3E %3Cpath class='st0' style='opacity:0.9; fill: %23FFFFFF; enable-background: new;' d='M52.41,6.32c-1.03,0-2.03,0.42-2.73,1.18V6.75c0-0.13-0.1-0.23-0.23-0.23h-1.4c-0.13,0-0.23,0.11-0.23,0.23 v10.72c0,0.13,0.1,0.23,0.23,0.23h1.4c0.13,0,0.23-0.1,0.23-0.23V13.5c0.71,0.75,1.7,1.18,2.74,1.18c2.17,0,3.94-1.87,3.94-4.19 S54.58,6.32,52.41,6.32z M52.08,13.01c-1.32,0-2.39-1.11-2.42-2.48v-0.07c0.02-1.38,1.09-2.49,2.4-2.49c1.32,0,2.41,1.12,2.41,2.51 S53.4,13,52.08,13.01L52.08,13.01z'/%3E %3Cpath class='st1' style='opacity:0.35; enable-background:new;' d='M52.08,7.98c-1.32,0-2.39,1.11-2.42,2.48v0.06c0.03,1.38,1.1,2.48,2.42,2.48s2.41-1.12,2.41-2.51 S53.4,7.98,52.08,7.98z M52.08,11.76c-0.63,0-1.14-0.56-1.17-1.25v-0.04c0.01-0.69,0.54-1.25,1.17-1.25c0.63,0,1.17,0.58,1.17,1.27 S52.72,11.76,52.08,11.76z'/%3E %3Cpath class='st0' style='opacity:0.9; fill: %23FFFFFF; enable-background: new;' d='M36.08,14.24c0,0.13-0.1,0.23-0.23,0.23h-1.41c-0.13,0-0.23-0.11-0.23-0.23V9.68c0-0.98-0.74-1.71-1.62-1.71 c-0.8,0-1.46,0.7-1.59,1.62l0.01,4.66c0,0.13-0.11,0.23-0.23,0.23h-1.41c-0.13,0-0.23-0.11-0.23-0.23V9.68 c0-0.98-0.74-1.71-1.62-1.71c-0.85,0-1.54,0.79-1.6,1.8v4.48c0,0.13-0.1,0.23-0.23,0.23h-1.4c-0.13,0-0.23-0.11-0.23-0.23V6.74 c0.01-0.13,0.1-0.22,0.23-0.22h1.4c0.13,0,0.22,0.11,0.23,0.22V7.4c0.5-0.68,1.3-1.09,2.16-1.1h0.03c1.09,0,2.09,0.6,2.6,1.55 c0.45-0.95,1.4-1.55,2.44-1.56c1.62,0,2.93,1.25,2.9,2.78L36.08,14.24z'/%3E %3Cpath class='st1' style='opacity:0.35; enable-background:new;' d='M84.34,13.59l-0.07-0.13l-1.96-2.99l1.94-2.95c0.44-0.67,0.26-1.56-0.41-2.02c-0.02,0-0.03,0-0.04-0.01 c-0.23-0.15-0.5-0.22-0.78-0.22h-1.61c-0.56,0-1.08,0.29-1.37,0.78L79.72,6.6l-0.34-0.56C79.09,5.56,78.57,5.27,78,5.27h-1.6 c-0.6,0-1.13,0.37-1.35,0.92c-2.19-1.66-5.28-1.47-7.26,0.45c-0.35,0.34-0.65,0.72-0.89,1.14c-0.9-1.62-2.58-2.72-4.5-2.72 c-0.5,0-1.01,0.07-1.48,0.23V3.51c0-0.82-0.66-1.48-1.47-1.48h-1.4c-0.81,0-1.47,0.66-1.47,1.47v3.75 c-0.95-1.36-2.5-2.18-4.17-2.19c-0.74,0-1.46,0.16-2.12,0.47c-0.24-0.17-0.54-0.26-0.84-0.26h-1.4c-0.45,0-0.87,0.21-1.15,0.56 c-0.02-0.03-0.04-0.05-0.07-0.08c-0.28-0.3-0.68-0.47-1.09-0.47h-1.39c-0.3,0-0.6,0.09-0.84,0.26c-0.67-0.3-1.39-0.46-2.12-0.46 c-1.83,0-3.43,1-4.37,2.5c-0.2-0.46-0.48-0.89-0.83-1.25c-0.8-0.81-1.89-1.25-3.02-1.25h-0.01c-0.89,0.01-1.75,0.33-2.46,0.88 c-0.74-0.57-1.64-0.88-2.57-0.88H28.1c-0.29,0-0.58,0.03-0.86,0.11c-0.28,0.06-0.56,0.16-0.82,0.28c-0.21-0.12-0.45-0.18-0.7-0.18 h-1.4c-0.82,0-1.47,0.66-1.47,1.47v7.5c0,0.82,0.66,1.47,1.47,1.47h1.4c0.82,0,1.48-0.66,1.48-1.48l0,0V9.79 c0.03-0.36,0.23-0.59,0.36-0.59c0.18,0,0.38,0.18,0.38,0.47v4.57c0,0.82,0.66,1.47,1.47,1.47h1.41c0.82,0,1.47-0.66,1.47-1.47 l-0.01-4.57c0.06-0.32,0.25-0.47,0.35-0.47c0.18,0,0.38,0.18,0.38,0.47v4.57c0,0.82,0.66,1.47,1.47,1.47h1.41 c0.82,0,1.47-0.66,1.47-1.47v-0.38c0.96,1.29,2.46,2.06,4.06,2.06c0.74,0,1.46-0.16,2.12-0.47c0.24,0.17,0.54,0.26,0.84,0.26h1.39 c0.3,0,0.6-0.09,0.84-0.26v2.01c0,0.82,0.66,1.47,1.47,1.47h1.4c0.82,0,1.47-0.66,1.47-1.47v-1.77c0.48,0.15,0.99,0.23,1.49,0.22 c1.7,0,3.22-0.87,4.17-2.2v0.52c0,0.82,0.66,1.47,1.47,1.47h1.4c0.3,0,0.6-0.09,0.84-0.26c0.66,0.31,1.39,0.47,2.12,0.47 c1.92,0,3.6-1.1,4.49-2.73c1.54,2.65,4.95,3.53,7.58,1.98c0.18-0.11,0.36-0.22,0.53-0.36c0.22,0.55,0.76,0.91,1.35,0.9H78 c0.56,0,1.08-0.29,1.37-0.78l0.37-0.61l0.37,0.61c0.29,0.48,0.81,0.78,1.38,0.78h1.6c0.81,0,1.46-0.66,1.45-1.46 C84.49,14.02,84.44,13.8,84.34,13.59L84.34,13.59z M35.86,14.47h-1.41c-0.13,0-0.23-0.11-0.23-0.23V9.68 c0-0.98-0.74-1.71-1.62-1.71c-0.8,0-1.46,0.7-1.59,1.62l0.01,4.66c0,0.13-0.1,0.23-0.23,0.23h-1.41c-0.13,0-0.23-0.11-0.23-0.23 V9.68c0-0.98-0.74-1.71-1.62-1.71c-0.85,0-1.54,0.79-1.6,1.8v4.48c0,0.13-0.1,0.23-0.23,0.23h-1.4c-0.13,0-0.23-0.11-0.23-0.23 V6.74c0.01-0.13,0.11-0.22,0.23-0.22h1.4c0.13,0,0.22,0.11,0.23,0.22V7.4c0.5-0.68,1.3-1.09,2.16-1.1h0.03 c1.09,0,2.09,0.6,2.6,1.55c0.45-0.95,1.4-1.55,2.44-1.56c1.62,0,2.93,1.25,2.9,2.78l0.01,5.16C36.09,14.36,35.98,14.46,35.86,14.47 L35.86,14.47z M45.97,14.24c0,0.13-0.1,0.23-0.23,0.23h-1.4c-0.13,0-0.23-0.11-0.23-0.23V13.5c-0.7,0.76-1.69,1.18-2.72,1.18 c-2.17,0-3.94-1.87-3.94-4.19s1.77-4.19,3.94-4.19c1.03,0,2.02,0.43,2.73,1.18V6.74c0-0.13,0.1-0.23,0.23-0.23h1.4 c0.12-0.01,0.22,0.08,0.23,0.21c0,0.01,0,0.01,0,0.02v7.51h-0.01V14.24z M52.41,14.67c-1.03,0-2.02-0.43-2.73-1.18v3.97 c0,0.13-0.1,0.23-0.23,0.23h-1.4c-0.13,0-0.23-0.1-0.23-0.23V6.75c0-0.13,0.1-0.22,0.23-0.22h1.4c0.13,0,0.23,0.11,0.23,0.23v0.73 c0.71-0.76,1.7-1.18,2.73-1.18c2.17,0,3.94,1.86,3.94,4.18S54.58,14.67,52.41,14.67z M66.24,11.39c-0.39,1.87-1.96,3.29-3.84,3.29 c-1.03,0-2.02-0.43-2.73-1.18v0.73c0,0.13-0.1,0.23-0.23,0.23h-1.4c-0.13,0-0.23-0.11-0.23-0.23V3.51c0-0.13,0.1-0.23,0.23-0.23 h1.4c0.13,0,0.23,0.11,0.23,0.23v3.97c0.71-0.75,1.7-1.18,2.73-1.17c1.88,0,3.45,1.4,3.84,3.28C66.37,10.19,66.37,10.8,66.24,11.39 L66.24,11.39L66.24,11.39z M71.67,14.68c-2,0.01-3.73-1.35-4.17-3.3c-0.13-0.59-0.13-1.19,0-1.77c0.44-1.94,2.17-3.31,4.17-3.3 c2.36,0,4.26,1.87,4.26,4.19S74.03,14.68,71.67,14.68L71.67,14.68z M83.04,14.47h-1.61c-0.13,0-0.24-0.06-0.3-0.17l-1.44-2.39 l-1.44,2.39c-0.06,0.11-0.18,0.17-0.3,0.17h-1.61c-0.04,0-0.08-0.01-0.12-0.03c-0.09-0.06-0.13-0.19-0.06-0.28l0,0l2.43-3.68 L76.2,6.84c-0.02-0.03-0.03-0.07-0.03-0.12c0-0.12,0.09-0.21,0.21-0.21h1.61c0.13,0,0.24,0.06,0.3,0.17l1.41,2.36l1.41-2.36 c0.06-0.11,0.18-0.17,0.3-0.17h1.61c0.04,0,0.08,0.01,0.12,0.03c0.09,0.06,0.13,0.19,0.06,0.28l0,0l-2.38,3.64l2.43,3.67 c0.02,0.03,0.03,0.07,0.03,0.12C83.25,14.38,83.16,14.47,83.04,14.47L83.04,14.47L83.04,14.47z'/%3E %3Cpath class='st0' style='opacity:0.9; fill: %23FFFFFF; enable-background: new;' d='M10.5,1.24c-5.11,0-9.25,4.15-9.25,9.25s4.15,9.25,9.25,9.25s9.25-4.15,9.25-9.25 C19.75,5.38,15.61,1.24,10.5,1.24z M14.89,12.77c-1.93,1.93-4.78,2.31-6.7,2.31c-0.7,0-1.41-0.05-2.1-0.16c0,0-1.02-5.64,2.14-8.81 c0.83-0.83,1.95-1.28,3.13-1.28c1.27,0,2.49,0.51,3.39,1.42C16.59,8.09,16.64,11,14.89,12.77z'/%3E %3Cpath class='st1' style='opacity:0.35; enable-background:new;' d='M10.5-0.01C4.7-0.01,0,4.7,0,10.49s4.7,10.5,10.5,10.5S21,16.29,21,10.49C20.99,4.7,16.3-0.01,10.5-0.01z M10.5,19.74c-5.11,0-9.25-4.15-9.25-9.25s4.14-9.26,9.25-9.26s9.25,4.15,9.25,9.25C19.75,15.61,15.61,19.74,10.5,19.74z'/%3E %3Cpath class='st1' style='opacity:0.35; enable-background:new;' d='M14.74,6.25C12.9,4.41,9.98,4.35,8.23,6.1c-3.16,3.17-2.14,8.81-2.14,8.81s5.64,1.02,8.81-2.14 C16.64,11,16.59,8.09,14.74,6.25z M12.47,10.34l-0.91,1.87l-0.9-1.87L8.8,9.43l1.86-0.9l0.9-1.87l0.91,1.87l1.86,0.9L12.47,10.34z'/%3E %3Cpolygon class='st0' style='opacity:0.9; fill: %23FFFFFF; enable-background: new;' points='14.33,9.43 12.47,10.34 11.56,12.21 10.66,10.34 8.8,9.43 10.66,8.53 11.56,6.66 12.47,8.53 '/%3E%3C/g%3E%3C/svg%3E");
+}
+a.mapboxgl-ctrl-logo.mapboxgl-compact {
+  width: 21px;
+  height: 21px;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3C?xml version='1.0' encoding='utf-8'?%3E %3Csvg version='1.1' id='Layer_1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 21 21' style='enable-background:new 0 0 21 21;' xml:space='preserve'%3E%3Cg transform='translate(0,0.01)'%3E%3Cpath d='m 10.5,1.24 c -5.11,0 -9.25,4.15 -9.25,9.25 0,5.1 4.15,9.25 9.25,9.25 5.1,0 9.25,-4.15 9.25,-9.25 0,-5.11 -4.14,-9.25 -9.25,-9.25 z m 4.39,11.53 c -1.93,1.93 -4.78,2.31 -6.7,2.31 -0.7,0 -1.41,-0.05 -2.1,-0.16 0,0 -1.02,-5.64 2.14,-8.81 0.83,-0.83 1.95,-1.28 3.13,-1.28 1.27,0 2.49,0.51 3.39,1.42 1.84,1.84 1.89,4.75 0.14,6.52 z' style='opacity:0.9;fill:%23ffffff;enable-background:new' class='st0'/%3E%3Cpath d='M 10.5,-0.01 C 4.7,-0.01 0,4.7 0,10.49 c 0,5.79 4.7,10.5 10.5,10.5 5.8,0 10.5,-4.7 10.5,-10.5 C 20.99,4.7 16.3,-0.01 10.5,-0.01 Z m 0,19.75 c -5.11,0 -9.25,-4.15 -9.25,-9.25 0,-5.1 4.14,-9.26 9.25,-9.26 5.11,0 9.25,4.15 9.25,9.25 0,5.13 -4.14,9.26 -9.25,9.26 z' style='opacity:0.35;enable-background:new' class='st1'/%3E%3Cpath d='M 14.74,6.25 C 12.9,4.41 9.98,4.35 8.23,6.1 5.07,9.27 6.09,14.91 6.09,14.91 c 0,0 5.64,1.02 8.81,-2.14 C 16.64,11 16.59,8.09 14.74,6.25 Z m -2.27,4.09 -0.91,1.87 -0.9,-1.87 -1.86,-0.91 1.86,-0.9 0.9,-1.87 0.91,1.87 1.86,0.9 z' style='opacity:0.35;enable-background:new' class='st1'/%3E%3Cpolygon points='11.56,12.21 10.66,10.34 8.8,9.43 10.66,8.53 11.56,6.66 12.47,8.53 14.33,9.43 12.47,10.34 ' style='opacity:0.9;fill:%23ffffff;enable-background:new' class='st0'/%3E%3C/g%3E%3C/svg%3E");
+}
+.mapboxgl-ctrl.mapboxgl-ctrl-attrib {
+  padding: 0 5px;
+  background-color: rgba(255,255,255,0.5);
+  margin: 0;
+}
+@media screen {
+  .mapboxgl-ctrl-attrib.mapboxgl-compact {
+    min-height: 20px;
+    padding: 0;
+    margin: 10px;
+    position: relative;
+    background-color: #fff;
+    border-radius: 3px 12px 12px 3px;
+  }
+  .mapboxgl-ctrl-attrib.mapboxgl-compact:hover {
+    padding: 2px 24px 2px 4px;
+    visibility: visible;
+    margin-top: 6px;
+  }
+  .mapboxgl-ctrl-top-left > .mapboxgl-ctrl-attrib.mapboxgl-compact:hover,
+  .mapboxgl-ctrl-bottom-left > .mapboxgl-ctrl-attrib.mapboxgl-compact:hover {
+    padding: 2px 4px 2px 24px;
+    border-radius: 12px 3px 3px 12px;
+  }
+  .mapboxgl-ctrl-attrib.mapboxgl-compact .mapboxgl-ctrl-attrib-inner {
+    display: none;
+  }
+  .mapboxgl-ctrl-attrib.mapboxgl-compact:hover .mapboxgl-ctrl-attrib-inner {
+    display: block;
+  }
+  .mapboxgl-ctrl-attrib.mapboxgl-compact::after {
+    content: '';
+    cursor: pointer;
+    position: absolute;
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath fill='%23333333' fill-rule='evenodd' d='M4,10a6,6 0 1,0 12,0a6,6 0 1,0 -12,0 M9,7a1,1 0 1,0 2,0a1,1 0 1,0 -2,0 M9,10a1,1 0 1,1 2,0l0,3a1,1 0 1,1 -2,0'/%3E %3C/svg%3E");
+    background-color: rgba(255,255,255,0.5);
+    width: 24px;
+    height: 24px;
+    box-sizing: border-box;
+    border-radius: 12px;
+  }
+  .mapboxgl-ctrl-bottom-right > .mapboxgl-ctrl-attrib.mapboxgl-compact::after {
+    bottom: 0;
+    right: 0;
+  }
+  .mapboxgl-ctrl-top-right > .mapboxgl-ctrl-attrib.mapboxgl-compact::after {
+    top: 0;
+    right: 0;
+  }
+  .mapboxgl-ctrl-top-left > .mapboxgl-ctrl-attrib.mapboxgl-compact::after {
+    top: 0;
+    left: 0;
+  }
+  .mapboxgl-ctrl-bottom-left > .mapboxgl-ctrl-attrib.mapboxgl-compact::after {
+    bottom: 0;
+    left: 0;
+  }
+}
+.mapboxgl-ctrl-attrib a {
+  color: rgba(0,0,0,0.75);
+  text-decoration: none;
+}
+.mapboxgl-ctrl-attrib a:hover {
+  color: inherit;
+  text-decoration: underline;
+}
+.mapboxgl-ctrl-attrib .mapbox-improve-map {
+  font-weight: bold;
+  margin-left: 2px;
+}
+.mapboxgl-attrib-empty {
+  display: none;
+}
+.mapboxgl-ctrl-scale {
+  background-color: rgba(255,255,255,0.75);
+  font-size: 10px;
+  border-width: medium 2px 2px;
+  border-style: none solid solid;
+  border-color: #333;
+  padding: 0 5px;
+  color: #333;
+  box-sizing: border-box;
+}
+.mapboxgl-popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-flex;
+  display: flex;
+  will-change: transform;
+  pointer-events: none;
+}
+.mapboxgl-popup-anchor-top,
+.mapboxgl-popup-anchor-top-left,
+.mapboxgl-popup-anchor-top-right {
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+.mapboxgl-popup-anchor-bottom,
+.mapboxgl-popup-anchor-bottom-left,
+.mapboxgl-popup-anchor-bottom-right {
+  -webkit-flex-direction: column-reverse;
+  flex-direction: column-reverse;
+}
+.mapboxgl-popup-anchor-left {
+  -webkit-flex-direction: row;
+  flex-direction: row;
+}
+.mapboxgl-popup-anchor-right {
+  -webkit-flex-direction: row-reverse;
+  flex-direction: row-reverse;
+}
+.mapboxgl-popup-tip {
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  z-index: 1;
+}
+.mapboxgl-popup-anchor-top .mapboxgl-popup-tip {
+  -webkit-align-self: center;
+  align-self: center;
+  border-top: none;
+  border-bottom-color: #fff;
+}
+.mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip {
+  -webkit-align-self: flex-start;
+  align-self: flex-start;
+  border-top: none;
+  border-left: none;
+  border-bottom-color: #fff;
+}
+.mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip {
+  -webkit-align-self: flex-end;
+  align-self: flex-end;
+  border-top: none;
+  border-right: none;
+  border-bottom-color: #fff;
+}
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+  -webkit-align-self: center;
+  align-self: center;
+  border-bottom: none;
+  border-top-color: #fff;
+}
+.mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip {
+  -webkit-align-self: flex-start;
+  align-self: flex-start;
+  border-bottom: none;
+  border-left: none;
+  border-top-color: #fff;
+}
+.mapboxgl-popup-anchor-bottom-right .mapboxgl-popup-tip {
+  -webkit-align-self: flex-end;
+  align-self: flex-end;
+  border-bottom: none;
+  border-right: none;
+  border-top-color: #fff;
+}
+.mapboxgl-popup-anchor-left .mapboxgl-popup-tip {
+  -webkit-align-self: center;
+  align-self: center;
+  border-left: none;
+  border-right-color: #fff;
+}
+.mapboxgl-popup-anchor-right .mapboxgl-popup-tip {
+  -webkit-align-self: center;
+  align-self: center;
+  border-right: none;
+  border-left-color: #fff;
+}
+.mapboxgl-popup-close-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  border: 0;
+  border-radius: 0 3px 0 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+.mapboxgl-popup-close-button:hover {
+  background-color: rgba(0,0,0,0.05);
+}
+.mapboxgl-popup-content {
+  position: relative;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  padding: 10px 10px 15px;
+  pointer-events: auto;
+}
+.mapboxgl-popup-anchor-top-left .mapboxgl-popup-content {
+  border-top-left-radius: 0;
+}
+.mapboxgl-popup-anchor-top-right .mapboxgl-popup-content {
+  border-top-right-radius: 0;
+}
+.mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-content {
+  border-bottom-left-radius: 0;
+}
+.mapboxgl-popup-anchor-bottom-right .mapboxgl-popup-content {
+  border-bottom-right-radius: 0;
+}
+.mapboxgl-popup-track-pointer {
+  display: none;
+}
+.mapboxgl-popup-track-pointer * {
+  pointer-events: none;
+  user-select: none;
+}
+.mapboxgl-map:hover .mapboxgl-popup-track-pointer {
+  display: flex;
+}
+.mapboxgl-map:active .mapboxgl-popup-track-pointer {
+  display: none;
+}
+.mapboxgl-marker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  will-change: transform;
+}
+.mapboxgl-user-location-dot {
+  background-color: #1da1f2;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+.mapboxgl-user-location-dot::before {
+  background-color: #1da1f2;
+  content: '';
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  -webkit-animation: mapboxgl-user-location-dot-pulse 2s infinite;
+  -moz-animation: mapboxgl-user-location-dot-pulse 2s infinite;
+  -ms-animation: mapboxgl-user-location-dot-pulse 2s infinite;
+  animation: mapboxgl-user-location-dot-pulse 2s infinite;
+}
+.mapboxgl-user-location-dot::after {
+  border-radius: 50%;
+  border: 2px solid #fff;
+  content: '';
+  height: 19px;
+  left: -2px;
+  position: absolute;
+  top: -2px;
+  width: 19px;
+  box-sizing: border-box;
+  box-shadow: 0 0 3px rgba(0,0,0,0.35);
+}
+@-webkit-keyframes mapboxgl-user-location-dot-pulse {
+  0% {
+    -webkit-transform: scale(1);
+    opacity: 1;
+  }
+  70% {
+    -webkit-transform: scale(3);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0;
+  }
+}
+@-ms-keyframes mapboxgl-user-location-dot-pulse {
+  0% {
+    -ms-transform: scale(1);
+    opacity: 1;
+  }
+  70% {
+    -ms-transform: scale(3);
+    opacity: 0;
+  }
+  100% {
+    -ms-transform: scale(1);
+    opacity: 0;
+  }
+}
+@keyframes mapboxgl-user-location-dot-pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  70% {
+    transform: scale(3);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+.mapboxgl-user-location-dot-stale {
+  background-color: #aaa;
+}
+.mapboxgl-user-location-dot-stale::after {
+  display: none;
+}
+.mapboxgl-crosshair,
+.mapboxgl-crosshair .mapboxgl-interactive,
+.mapboxgl-crosshair .mapboxgl-interactive:active {
+  cursor: crosshair;
+}
+.mapboxgl-boxzoom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  background: #fff;
+  border: 2px dotted #202020;
+  opacity: 0.5;
+}
+@media print {
+  .mapbox-improve-map {
+    display: none;
+  }
+}
+.mapboxgl-missing-css {
+  display: none;
+}
+.mapboxgl-ctrl-bottom-left .mapboxgl-ctrl {
+  margin: 0 0 10px 10px;
+  display: inline-block;
+  vertical-align: bottom;
+  float: unset;
+}
+#map-container {
+  width: 100%;
+}
+.mapboxgl-marker {
+  width: 0;
+  height: 0;
+}
+.mapboxgl-marker text {
+  pointer-events: none;
+}
+.mapboxgl-ctrl-group {
+  border-radius: none !important;
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  overflow: hidden;
+  background: none !important;
+}
+.mapboxgl-ctrl-top-right .mapboxgl-ctrl button .mapboxgl-ctrl-compass-arrow {
+  background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='utf-8'%3F%3E%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 300 300' %3E%3Cpolygon points='177.5,36.8 150,7.2 122.5,36.8 127.4,41.4 146.6,20.7 146.6,89.2 153.4,89.2 153.4,20.7 172.6,41.4 '/%3E%3C/svg%3E");
+}
+.mapboxgl-ctrl-top-right .mapboxgl-ctrl button .north {
+  position: relative;
+  top: -28px;
+}
+.compass {
+  z-index: 100;
+  position: relative;
+  top: 5px;
+}
+.marker-text {
+  white-space: pre;
+  position: absolute;
+  left: 0;
+  top: 0;
+  line-height: 1.2;
+  font-family: Roboto, sans-serif;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+.marker-text a {
+  pointer-events: all;
+}
+.label-style-box {
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #f2f3f0;
+  text-shadow: none;
+}
+.label-style-box-rounded {
+  border-radius: 10px;
+}
+.svg-marker {
+  position: absolute;
+  font-family: Roboto, sans-serif;
+  overflow: visible;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.svg-marker text {
+  dominant-baseline: middle;
+  text-anchor: middle;
+}
+.svg-marker .helper-line {
+  stroke: #f0f;
+  stroke-dasharray: 2, 2;
+  fill: none;
+  opacity: 0.6;
+}
+.svg-marker circle.helper {
+  stroke: #f0f;
+  fill: none;
+  opacity: 0.6;
+}
+.svg-marker g.helper text {
+  opacity: 0;
+  fill: #f0f;
+  font-size: 11px;
+  text-anchor: middle;
+  dominant-baseline: middle;
+}
+.svg-marker .connect-line {
+  stroke: #000;
+  opacity: 1;
+}
+.svg-marker path.icon-square,
+.svg-marker path.icon-square-sm {
+  shape-rendering: crispEdges;
+}
+.mapboxgl-ctrl-scale {
+  border-left: 0 !important;
+  border-right: 0 !important;
+}
+@media screen and (min-width: 451px) {
+  .mapboxgl-marker.mobile-only {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+@media screen and (max-width: 450px) {
+  .mapboxgl-marker.desktop-only {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+.mapboxgl-marker .fake-marker {
+  opacity: 0;
+  pointer-events: none;
+}
+.mapboxgl-marker .text-only .fake-marker {
+  opacity: 0.4;
+}
+.mapboxgl-marker:hover .text-only .fake-marker {
+  opacity: 1;
+}
+.mapboxgl-popup-content {
+  white-space: pre-wrap;
+  max-width: 200px;
+  pointer-events: none;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+  padding: 10px;
+  padding-right: 10px;
+  font-size: 11px;
+  border: 1px solid whitesmoke;
+  border-radius: 0px;
+  font-family: Roboto, sans-serif;
+  line-height: 15px;
+}
+.mapboxgl-popup-content a {
+  cursor: pointer !important;
+  pointer-events: auto;
+}
+.mapboxgl-popup-tip {
+  z-index: -1;
+}
+.mapboxgl-popup-anchor-top .mapboxgl-popup-tip {
+  margin-bottom: -1px;
+  border-bottom-color: whitesmoke;
+}
+.mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip {
+  margin-bottom: -1px;
+  margin-right: -1px;
+  border-bottom-color: whitesmoke;
+}
+.mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip {
+  margin-bottom: -1px;
+  margin-left: -1px;
+  border-bottom-color: whitesmoke;
+}
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip {
+  margin-top: -1px;
+  border-top-color: whitesmoke;
+}
+.mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip {
+  margin-top: -1px;
+  margin-right: -1px;
+  border-top-color: whitesmoke;
+}
+.mapboxgl-popup-anchor-bottom-right .mapboxgl-popup-tip {
+  margin-top: 0px;
+  margin-right: 0px;
+  border-top-color: whitesmoke;
+}
+.mapboxgl-popup-anchor-left .mapboxgl-popup-tip {
+  margin-right: -1px;
+  border-right-color: whitesmoke;
+}
+.mapboxgl-popup-anchor-right .mapboxgl-popup-tip {
+  margin-left: -1px;
+  border-left-color: whitesmoke;
+}
+.mapboxgl-popup-tip-clone {
+  position: absolute;
+  z-index: 2;
+}
+.mapboxgl-popup-anchor-top .mapboxgl-popup-tip-clone {
+  transform: translate(0px,3px);
+  border-bottom-color: white;
+}
+.mapboxgl-popup-anchor-top-left .mapboxgl-popup-tip-clone {
+  transform: translate(1px,3px);
+  border-bottom-color: white;
+}
+.mapboxgl-popup-anchor-top-right .mapboxgl-popup-tip-clone {
+  transform: translate(-1px,3px);
+  border-bottom-color: white;
+}
+.mapboxgl-popup-anchor-bottom .mapboxgl-popup-tip-clone {
+  transform: translate(0px,-2px);
+  border-top-color: white;
+}
+.mapboxgl-popup-anchor-bottom-left .mapboxgl-popup-tip-clone {
+  transform: translate(1px,-3px);
+  border-top-color: white;
+}
+.mapboxgl-popup-anchor-bottom-right .mapboxgl-popup-tip-clone {
+  transform: translate(-1px,-3px);
+  border-top-color: white;
+}
+.mapboxgl-popup-anchor-left .mapboxgl-popup-tip-clone {
+  transform: translate(2px,0px);
+  border-right-color: white;
+}
+.mapboxgl-popup-anchor-right .mapboxgl-popup-tip-clone {
+  transform: translate(-2px,0px);
+  border-left-color: white;
+}
+.mapboxgl-popup.mobile {
+  right: 5px;
+  left: 5px;
+  display: inline-block;
+  position: fixed;
+  z-index: 1000001;
+}
+.mapboxgl-popup.mobile .mapboxgl-popup-tip {
+  display: none;
+}
+.mapboxgl-popup.mobile .mapboxgl-popup-content {
+  max-width: none;
+  border-radius: 0px !important;
+}
+.mob-active-marker svg {
+  filter: drop-shadow(yellow 0px 0px 1px) drop-shadow(yellow 0px 0px 1px) drop-shadow(yellow 0px 0px 1px);
+}
+#minimap-container {
+  position: absolute;
+  pointer-events: none;
+  overflow: hidden;
+}
+#minimap-container svg {
+  overflow: visible;
+}
+#minimap-container circle.water {
+  fill: #94c1e1;
+  stroke: white;
+  stroke-width: 2;
+}
+#minimap-container .land {
+  fill: white;
+}
+#minimap-container path.view {
+  fill: none;
+  stroke: #d00;
+  stroke-width: 2;
+}
+#minimap-container circle.view {
+  fill: #d00;
+  stroke: none;
+}
+#minimap-container .graticule {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 0.5px;
+  stroke-opacity: 0.5;
+}
+#minimap-container path.outline {
+  stroke-width: 2;
+}
+#minimap-container div.label {
+  position: absolute;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+#minimap-container div.label > span {
+  color: #bababa;
+}
+#minimap-container div.label.outline {
+  color: #fff;
+  opacity: 0.5;
+}
+#loader {
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+  display: none;
+  right: 0px;
+  opacity: 0.4;
+}
+#mapkey {
+  box-sizing: border-box;
+}
+#mapkey.enabled {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+#mapkey .key-title {
+  width: 100%;
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0 0 5px !important;
+}
+#mapkey .key-item {
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+}
+#mapkey .key-item .svg-container {
+  width: 33px;
+  margin-right: 5px;
+  flex: 0 0 33px;
+  height: 30px;
+  text-align: center;
+}
+#mapkey .key-item > div {
+  flex: 1;
+}
+#mapkey .key-item p {
+  margin-top: 6px !important;
+}
+#mapkey .key-item p + p {
+  margin-top: 2px !important;
+}
+#mapkey .key-item svg text {
+  dominant-baseline: central;
+}
+#mapkey .key-items.list {
+  display: inline-block;
+}
+#mapkey .key-items.list .key-item {
+  display: inline-block;
+  margin-right: 15px;
+}
+#mapkey .key-items.list .key-item .svg-container {
+  float: left;
+}
+#mapkey .key-items.list .key-item > div {
+  overflow: hidden;
+}
+#mapkey .key-items.grid {
+  display: grid;
+  grid-gap: 10px 15px;
+  grid-template-columns: repeat(1,1fr);
+}
+#mapkey .key-items.grid .key-item {
+  backgroundox-sizing: border-box;
+  position: relative;
+}
+body.vis-height-fixed.vis-locator-map {
+  overflow-y: hidden;
+}
+.osm-attribution {
+  position: absolute;
+  z-index: 1000000;
+  right: 0px;
+  bottom: 0px;
+  display: block;
+  background-color: rgba(255,255,255,0.73);
+  font-weight: normal;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 11px;
+  padding: 1px 3px 0px 4px;
+  opacity: 1;
+  color: rgba(119,119,119,0.87);
+}
+.osm-attribution a {
+  text-decoration: none;
+  color: rgba(114,114,114,0.8);
+}
+.callout-line path {
+  stroke: #222;
+  fill: none;
+}
+.callout-line path.crisp {
+  shape-rendering: crispEdges;
+}
+.callout-line circle {
+  stroke: #222;
+  fill: none;
+  stroke-dasharray: 3, 5;
+}
+.callout-line-arrow-head {
+  fill: #222;
+}
+.callout-line-arrow-head.callout-line-arrow-head-stroke {
+  stroke: #222;
+  fill: none;
+}
+.chart.png-export .dw-chart-footer .static-image,
+.chart.png-export .dw-chart-footer .chart-action-data,
+.chart.png-export .dw-chart-footer .dw-data-link {
+  display: none !important;
+}
+.chart.png-export a {
+  color: unset !important;
+}
+.map-key {
+  pointer-events: none;
+}
+
+        
+            </style>
+
+    
+
+</head>
+<body class="dw-chart chart vis-height-fixed theme-datawrapper-data vis-locator-map">
+    
+
+                            
+    <div class="dw-chart-header" id="header">
+                    <h1 class="hidden">
+                <span class="chart-title">Mapa</span>
+            </h1>
+
+            <p class="chart-intro">Casos COVID-19 confirmados por prueba PCR. Datos actualizados el 22 de abril de 2020.</p>
+            </div>
+
+    <div class="dw-chart-body content-below-chart dw-light" id="chart" style="position: relative;"><div id="map-container" class="export-group mapboxgl-map" style="height: 604.2px;"><div class="mapboxgl-canary" style="visibility: hidden;"></div><div class="mapboxgl-canvas-container" style="pointer-events: auto;"><canvas class="mapboxgl-canvas" style="position: absolute; width: 1140px; height: 604px;" tabindex="0" aria-label="Map" width="1140" height="604"></canvas><span class="export-rect osm-attribution"><span class="export-text">© <a href="https://www.openstreetmap.org/copyright" target="_blank"> OpenStreetMap</a> contributors</span></span><div class="mapboxgl-marker mapboxgl-marker-anchor-center" style="transform: translate(-50%, -50%) translate(590px, 170px);"><div id="m0" class="m-wrapper" data-rotate="0" data-anchor="bottom-center" data-offsetx="19" data-offsety="-100"><svg class="svg-marker" width="28" height="28"><g id="svg-id-m0" transform="translate(-14,-14)"><g class="helper" style="display: none;" transform="translate(14,14)"><path class="helper-line" d="M0,0"></path><circle class="helper from" r="3"></circle><circle class="helper to" r="3"></circle><text class="dx"></text><text class="dy"></text></g><path class="icon-hospital" d="M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z" transform="translate(14,14) rotate(0) scale(0.02,-0.02) translate(-375,-350)" style="fill: rgb(199, 30, 29);"></path><path d="M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z" class="icon-invis" transform="translate(14,14) scale(0.02,-0.02) translate(-375,-350)" style="stroke: rgba(0, 0, 0, 0); fill: rgba(0, 0, 0, 0); vector-effect: non-scaling-stroke; stroke-width: 10px;"></path><defs><filter id="glow"><feGaussianBlur class="blur" stdDeviation="4.5" result="coloredBlur"></feGaussianBlur><feMerge><feMergeNode in="coloredBlur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs></g><g class="callout-line"><path style="stroke-width: 1px; stroke: rgb(51, 51, 51);" d="M 22.564841549097032,-46.19999694824219 Q 26.14443449561943,-24.239915209804018 10.724124872782335,-8.200191809523195"></path></g></svg><div class="marker-text label label-style-box label-style-box-rounded" style="text-align: center; color: rgb(29, 129, 162); font-size: 14px; text-shadow: none; background-color: white; left: -60.2083px; top: -85px;">ZBS Logroño   |  1.557</div></div></div><div class="mapboxgl-marker mapboxgl-marker-anchor-center" style="transform: translate(-50%, -50%) translate(523px, 198px);"><div id="m1" class="m-wrapper" data-rotate="0" data-anchor="bottom-center" data-offsetx="-62" data-offsety="-9"><svg class="svg-marker" width="28" height="28"><g id="svg-id-m1" transform="translate(-14,-14)"><g class="helper" style="display: none;" transform="translate(14,14)"><path class="helper-line" d="M0,0"></path><circle class="helper from" r="3"></circle><circle class="helper to" r="3"></circle><text class="dx"></text><text class="dy"></text></g><path class="icon-hospital" d="M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z" transform="translate(14,14) rotate(0) scale(0.02,-0.02) translate(-375,-350)" style="fill: rgb(199, 30, 29);"></path><path d="M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z" class="icon-invis" transform="translate(14,14) scale(0.02,-0.02) translate(-375,-350)" style="stroke: rgba(0, 0, 0, 0); fill: rgba(0, 0, 0, 0); vector-effect: non-scaling-stroke; stroke-width: 10px;"></path><defs><filter id="glow"><feGaussianBlur class="blur" stdDeviation="4.5" result="coloredBlur"></feGaussianBlur><feMerge><feMergeNode in="coloredBlur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs></g><g class="callout-line"><path style="stroke-width: 1px; stroke: rgb(51, 51, 51);" d="M -45.04219796898491,6 Q -31.501750107534484,-7.264063779689342 -12.766230366912758,-4.390143758342608"></path></g></svg><div class="marker-text label label-style-box label-style-box-rounded" style="text-align: center; color: rgb(29, 129, 162); font-size: 14px; text-shadow: none; background-color: white; left: -137.742px; top: 6px;">ZBS Navarrete   |   92</div></div></div><div class="mapboxgl-marker mapboxgl-marker-anchor-center" style="transform: translate(-50%, -50%) translate(429px, 207px);"><div id="m2" class="m-wrapper" data-rotate="0" data-anchor="bottom-center" data-offsetx="-22" data-offsety="-74"><svg class="svg-marker" width="28" height="28"><g id="svg-id-m2" transform="translate(-14,-14)"><g class="helper" style="display: none;" transform="translate(14,14)"><path class="helper-line" d="M0,0"></path><circle class="helper from" r="3"></circle><circle class="helper to" r="3"></circle><text class="dx"></text><text class="dy"></text></g><path class="icon-hospital" d="M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z" transform="translate(14,14) rotate(0) scale(0.02,-0.02) translate(-375,-350)" style="fill: rgb(199, 30, 29);"></path><path d="M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z" class="icon-invis" transform="translate(14,14) scale(0.02,-0.02) translate(-375,-350)" style="stroke: rgba(0, 0, 0, 0); fill: rgba(0, 0, 0, 0); vector-effect: non-scaling-stroke; stroke-width: 10px;"></path><defs><filter id="glow"><feGaussianBlur class="blur" stdDeviation="4.5" result="coloredBlur"></feGaussianBlur><feMerge><feMergeNode in="coloredBlur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs></g><g class="callout-line"><path style="stroke-width: 1px; stroke: rgb(51, 51, 51);" d="M 6.353849379204629,-20.199996948242188 Q 10.491346267494944,-15.710530257831262 9.382271048140394,-9.706852732952457"></path></g></svg><div class="marker-text label label-style-box label-style-box-rounded" style="text-align: center; color: rgb(29, 129, 162); font-size: 14px; text-shadow: none; background-color: white; left: -91.5667px; top: -59px;">ZBS Nájera   |   208</div></div></div><div class="mapboxgl-marker mapboxgl-marker-anchor-center" style="transform: translate(-50%, -50%) translate(309px, 189px);"><div id="m3" class="m-wrapper" data-rotate="0" data-anchor="bottom-center" data-offsetx="0" data-offsety="50"><svg class="svg-marker" width="28" height="28"><g id="svg-id-m3" transform="translate(-14,-14)"><g class="helper" style="display: none;" transform="translate(14,14)"><path class="helper-line" d="M0,0"></path><circle class="helper from" r="3"></circle><circle class="helper to" r="3"></circle><text class="dx"></text><text class="dy"></text></g><path class="icon-hospital" d="M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z" transform="translate(14,14) rotate(0) scale(0.02,-0.02) translate(-375,-350)" style="fill: rgb(199, 30, 29);"></path><path d="M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z" class="icon-invis" transform="translate(14,14) scale(0.02,-0.02) translate(-375,-350)" style="stroke: rgba(0, 0, 0, 0); fill: rgba(0, 0, 0, 0); vector-effect: non-scaling-stroke; stroke-width: 10px;"></path><defs><filter id="glow"><feGaussianBlur class="blur" stdDeviation="4.5" result="coloredBlur"></feGaussianBlur><feMerge><feMergeNode in="coloredBlur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs></g><g class="callout-line"><path style="stroke-width: 1px; stroke: rgb(51, 51, 51);" d="M -9.699995325640147,65 Q -22.213866828641965,37.53907649520821 -7.753450926609621,11.051425189931678"></path></g></svg><div class="marker-text label label-style-box label-style-box-rounded" style="text-align: center; color: rgb(29, 129, 162); font-size: 14px; text-shadow: none; background-color: white; left: -97.2917px; top: 65px;">ZBS Santo Domingo   |   474</div></div></div><div class="mapboxgl-marker mapboxgl-marker-anchor-center" style="transform: translate(-50%, -50%) translate(367px, 88px);"><div id="m4" class="m-wrapper" data-rotate="0" data-anchor="bottom-center" data-offsetx="-80" data-offsety="-48"><svg class="svg-marker" width="28" height="28"><g id="svg-id-m4" transform="translate(-14,-14)"><g class="helper" style="display: none;" transform="translate(14,14)"><path class="helper-line" d="M0,0"></path><circle class="helper from" r="3"></circle><circle class="helper to" r="3"></circle><text class="dx"></text><text class="dy"></text></g><path class="icon-hospital" d="M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z" transform="translate(14,14) rotate(0) scale(0.02,-0.02) translate(-375,-350)" style="fill: rgb(199, 30, 29);"></path><path d="M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z" class="icon-invis" transform="translate(14,14) scale(0.02,-0.02) translate(-375,-350)" style="stroke: rgba(0, 0, 0, 0); fill: rgba(0, 0, 0, 0); vector-effect: non-scaling-stroke; stroke-width: 10px;"></path><defs><filter id="glow"><feGaussianBlur class="blur" stdDeviation="4.5" result="coloredBlur"></feGaussianBlur><feMerge><feMergeNode in="coloredBlur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs></g><g class="callout-line"><path style="stroke-width: 1px; stroke: rgb(51, 51, 51);" d="M -17.300003051757812,-32.67004489872348 Q -4.014165575714578,-27.329385607265834 -0.31519052325475766,-13.49632005155666"></path></g></svg><div class="marker-text label label-style-box label-style-box-rounded" style="text-align: center; color: rgb(29, 129, 162); font-size: 14px; text-shadow: none; background-color: white; left: -142.7px; top: -33px;">ZBS Haro   |  374</div></div></div><div class="mapboxgl-marker mapboxgl-marker-anchor-center" style="transform: translate(-50%, -50%) translate(653px, 217px);"><div id="m5" class="m-wrapper" data-rotate="0" data-anchor="bottom-center" data-offsetx="121" data-offsety="-87"><svg class="svg-marker" width="28" height="28"><g id="svg-id-m5" transform="translate(-14,-14)"><g class="helper" style="display: none;" transform="translate(14,14)"><path class="helper-line" d="M0,0"></path><circle class="helper from" r="3"></circle><circle class="helper to" r="3"></circle><text class="dx"></text><text class="dy"></text></g><path class="icon-hospital" d="M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z" transform="translate(14,14) rotate(0) scale(0.02,-0.02) translate(-375,-350)" style="fill: rgb(199, 30, 29);"></path><path d="M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z" class="icon-invis" transform="translate(14,14) scale(0.02,-0.02) translate(-375,-350)" style="stroke: rgba(0, 0, 0, 0); fill: rgba(0, 0, 0, 0); vector-effect: non-scaling-stroke; stroke-width: 10px;"></path><defs><filter id="glow"><feGaussianBlur class="blur" stdDeviation="4.5" result="coloredBlur"></feGaussianBlur><feMerge><feMergeNode in="coloredBlur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs></g><g class="callout-line"><path style="stroke-width: 1px; stroke: rgb(51, 51, 51);" d="M 104.75613650815593,-33.19999694824219 Q 67.87214510427663,7.30904172833279 13.334519320689068,2.107271811174334"></path></g></svg><div class="marker-text label label-style-box label-style-box-rounded" style="text-align: center; color: rgb(29, 129, 162); font-size: 14px; text-shadow: none; background-color: white; left: 54.1667px; top: -72px;">ZBS Murillo   |   33</div></div></div><div class="mapboxgl-marker mapboxgl-marker-anchor-center" style="transform: translate(-50%, -50%) translate(849px, 291px);"><div id="m6" class="m-wrapper" data-rotate="0" data-anchor="bottom-center" data-offsetx="7" data-offsety="-93"><svg class="svg-marker" width="28" height="28"><g id="svg-id-m6" transform="translate(-14,-14)"><g class="helper" style="display: none;" transform="translate(14,14)"><path class="helper-line" d="M0,0"></path><circle class="helper from" r="3"></circle><circle class="helper to" r="3"></circle><text class="dx"></text><text class="dy"></text></g><path class="icon-hospital" d="M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z" transform="translate(14,14) rotate(0) scale(0.02,-0.02) translate(-375,-350)" style="fill: rgb(199, 30, 29);"></path><path d="M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z" class="icon-invis" transform="translate(14,14) scale(0.02,-0.02) translate(-375,-350)" style="stroke: rgba(0, 0, 0, 0); fill: rgba(0, 0, 0, 0); vector-effect: non-scaling-stroke; stroke-width: 10px;"></path><defs><filter id="glow"><feGaussianBlur class="blur" stdDeviation="4.5" result="coloredBlur"></feGaussianBlur><feMerge><feMergeNode in="coloredBlur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs></g><g class="callout-line"><path style="stroke-width: 1px; stroke: rgb(51, 51, 51);" d="M 13.966506116845697,-39.19999694824219 Q 19.31610447081008,-23.217365182910594 9.739758070923436,-9.348107440540133"></path></g></svg><div class="marker-text label label-style-box label-style-box-rounded" style="text-align: center; color: rgb(29, 129, 162); font-size: 14px; text-shadow: none; background-color: white; left: -72.475px; top: -78px;">ZBS Calahorra   |   355</div></div></div><div class="mapboxgl-marker mapboxgl-marker-anchor-center" style="transform: translate(-50%, -50%) translate(967px, 383px);"><div id="m7" class="m-wrapper" data-rotate="0" data-anchor="bottom-center" data-offsetx="-5" data-offsety="-89"><svg class="svg-marker" width="28" height="28"><g id="svg-id-m7" transform="translate(-14,-14)"><g class="helper" style="display: none;" transform="translate(14,14)"><path class="helper-line" d="M0,0"></path><circle class="helper from" r="3"></circle><circle class="helper to" r="3"></circle><text class="dx"></text><text class="dy"></text></g><path class="icon-hospital" d="M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z" transform="translate(14,14) rotate(0) scale(0.02,-0.02) translate(-375,-350)" style="fill: rgb(199, 30, 29);"></path><path d="M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z" class="icon-invis" transform="translate(14,14) scale(0.02,-0.02) translate(-375,-350)" style="stroke: rgba(0, 0, 0, 0); fill: rgba(0, 0, 0, 0); vector-effect: non-scaling-stroke; stroke-width: 10px;"></path><defs><filter id="glow"><feGaussianBlur class="blur" stdDeviation="4.5" result="coloredBlur"></feGaussianBlur><feMerge><feMergeNode in="coloredBlur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs></g><g class="callout-line"><path style="stroke-width: 1px; stroke: rgb(51, 51, 51);" d="M 7.027252384571417,-35.19999694824219 Q 13.791083805910517,-23.24387735545711 8.284486984485916,-10.65914046271478"></path></g></svg><div class="marker-text label label-style-box label-style-box-rounded" style="text-align: center; color: rgb(29, 129, 162); font-size: 14px; text-shadow: none; background-color: white; left: -73.1417px; top: -74px;">ZBS Alfaro   |   123</div></div></div><div class="mapboxgl-marker mapboxgl-marker-anchor-center" style="transform: translate(-50%, -50%) translate(854px, 510px);"><div id="m8" class="m-wrapper" data-rotate="0" data-anchor="bottom-center" data-offsetx="77" data-offsety="-66"><svg class="svg-marker" width="28" height="28"><g id="svg-id-m8" transform="translate(-14,-14)"><g class="helper" style="display: none;" transform="translate(14,14)"><path class="helper-line" d="M0,0"></path><circle class="helper from" r="3"></circle><circle class="helper to" r="3"></circle><text class="dx"></text><text class="dy"></text></g><path class="icon-hospital" d="M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z" transform="translate(14,14) rotate(0) scale(0.02,-0.02) translate(-375,-350)" style="fill: rgb(199, 30, 29);"></path><path d="M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z" class="icon-invis" transform="translate(14,14) scale(0.02,-0.02) translate(-375,-350)" style="stroke: rgba(0, 0, 0, 0); fill: rgba(0, 0, 0, 0); vector-effect: non-scaling-stroke; stroke-width: 10px;"></path><defs><filter id="glow"><feGaussianBlur class="blur" stdDeviation="4.5" result="coloredBlur"></feGaussianBlur><feMerge><feMergeNode in="coloredBlur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs></g><g class="callout-line"><path style="stroke-width: 1px; stroke: rgb(51, 51, 51);" d="M 60.06305086977819,-12.199996948242188 Q 40.47723126425482,7.4135495447754405 13.034902306526698,3.513021756167322"></path></g></svg><div class="marker-text label label-style-box label-style-box-rounded" style="text-align: center; color: rgb(29, 129, 162); font-size: 14px; text-shadow: none; background-color: white; left: 7.75px; top: -51px;">ZBS Cervera   |   22</div></div></div><div class="mapboxgl-marker mapboxgl-marker-anchor-center" style="transform: translate(-50%, -50%) translate(571px, 344px);"><div id="m9" class="m-wrapper" data-rotate="0" data-anchor="bottom-center" data-offsetx="4" data-offsety="39"><svg class="svg-marker" width="28" height="28"><g id="svg-id-m9" transform="translate(-14,-14)"><g class="helper" style="display: none;" transform="translate(14,14)"><path class="helper-line" d="M0,0"></path><circle class="helper from" r="3"></circle><circle class="helper to" r="3"></circle><text class="dx"></text><text class="dy"></text></g><path class="icon-hospital" d="M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z" transform="translate(14,14) rotate(0) scale(0.02,-0.02) translate(-375,-350)" style="fill: rgb(199, 30, 29);"></path><path d="M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z" class="icon-invis" transform="translate(14,14) scale(0.02,-0.02) translate(-375,-350)" style="stroke: rgba(0, 0, 0, 0); fill: rgba(0, 0, 0, 0); vector-effect: non-scaling-stroke; stroke-width: 10px;"></path><defs><filter id="glow"><feGaussianBlur class="blur" stdDeviation="4.5" result="coloredBlur"></feGaussianBlur><feMerge><feMergeNode in="coloredBlur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs></g><g class="callout-line"><path style="stroke-width: 1px; stroke: rgb(51, 51, 51);" d="M -7.058544258127432,54 Q -18.007412769488376,32.71843589072486 -7.551482588884835,11.190402616071022"></path></g></svg><div class="marker-text label label-style-box label-style-box-rounded" style="text-align: center; color: rgb(29, 129, 162); font-size: 14px; text-shadow: none; background-color: white; left: -73.125px; top: 54px;">ZBS San Román   |   1</div></div></div><div class="mapboxgl-marker mapboxgl-marker-anchor-center" style="transform: translate(-50%, -50%) translate(485px, 326px);"><div id="m10" class="m-wrapper" data-rotate="0" data-anchor="bottom-center" data-offsetx="-60" data-offsety="6"><svg class="svg-marker" width="28" height="28"><g id="svg-id-m10" transform="translate(-14,-14)"><g class="helper" style="display: none;" transform="translate(14,14)"><path class="helper-line" d="M0,0"></path><circle class="helper from" r="3"></circle><circle class="helper to" r="3"></circle><text class="dx"></text><text class="dy"></text></g><path class="icon-hospital" d="M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z" transform="translate(14,14) rotate(0) scale(0.02,-0.02) translate(-375,-350)" style="fill: rgb(199, 30, 29);"></path><path d="M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z" class="icon-invis" transform="translate(14,14) scale(0.02,-0.02) translate(-375,-350)" style="stroke: rgba(0, 0, 0, 0); fill: rgba(0, 0, 0, 0); vector-effect: non-scaling-stroke; stroke-width: 10px;"></path><defs><filter id="glow"><feGaussianBlur class="blur" stdDeviation="4.5" result="coloredBlur"></feGaussianBlur><feMerge><feMergeNode in="coloredBlur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs></g><g class="callout-line"><path style="stroke-width: 1px; stroke: rgb(51, 51, 51);" d="M -49.032385948953085,21 Q -36.70344262865832,1.2130467667221865 -13.476514049859219,-0.7959705170086957"></path></g></svg><div class="marker-text label label-style-box label-style-box-rounded" style="text-align: center; color: rgb(29, 129, 162); font-size: 14px; text-shadow: none; background-color: white; left: -128.592px; top: 21px;">ZBS Torrecilla   |  9</div></div></div><div class="mapboxgl-marker mapboxgl-marker-anchor-center" style="transform: translate(-50%, -50%) translate(776px, 347px);"><div id="m11" class="m-wrapper" data-rotate="0" data-anchor="bottom-center" data-offsetx="-32" data-offsety="-6"><svg class="svg-marker" width="28" height="28"><g id="svg-id-m11" transform="translate(-14,-14)"><g class="helper" style="display: none;" transform="translate(14,14)"><path class="helper-line" d="M0,0"></path><circle class="helper from" r="3"></circle><circle class="helper to" r="3"></circle><text class="dx"></text><text class="dy"></text></g><path class="icon-hospital" d="M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z" transform="translate(14,14) rotate(0) scale(0.02,-0.02) translate(-375,-350)" style="fill: rgb(199, 30, 29);"></path><path d="M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z" class="icon-invis" transform="translate(14,14) scale(0.02,-0.02) translate(-375,-350)" style="stroke: rgba(0, 0, 0, 0); fill: rgba(0, 0, 0, 0); vector-effect: non-scaling-stroke; stroke-width: 10px;"></path><defs><filter id="glow"><feGaussianBlur class="blur" stdDeviation="4.5" result="coloredBlur"></feGaussianBlur><feMerge><feMergeNode in="coloredBlur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs></g><g class="callout-line"><path style="stroke-width: 1px; stroke: rgb(51, 51, 51);" d="M -24.22251754739422,9 Q -21.4354614504461,1.0728267166991992 -13.421489165636585,-1.4538323757227851"></path></g></svg><div class="marker-text label label-style-box label-style-box-rounded" style="text-align: center; color: rgb(29, 129, 162); font-size: 14px; text-shadow: none; background-color: white; left: -99.85px; top: 9px;">ZBS Arnedo   |   96</div></div></div><div class="mapboxgl-marker mapboxgl-marker-anchor-center" style="transform: translate(-50%, -50%) translate(585px, 219px);"><div id="m12" class="m-wrapper" data-rotate="0" data-anchor="bottom-center" data-offsetx="69" data-offsety="-7"><svg class="svg-marker" width="28" height="28"><g id="svg-id-m12" transform="translate(-14,-14)"><g class="helper" style="display: none;" transform="translate(14,14)"><path class="helper-line" d="M0,0"></path><circle class="helper from" r="3"></circle><circle class="helper to" r="3"></circle><text class="dx"></text><text class="dy"></text></g><path class="icon-hospital" d="M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z" transform="translate(14,14) rotate(0) scale(0.02,-0.02) translate(-375,-350)" style="fill: rgb(199, 30, 29);"></path><path d="M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z" class="icon-invis" transform="translate(14,14) scale(0.02,-0.02) translate(-375,-350)" style="stroke: rgba(0, 0, 0, 0); fill: rgba(0, 0, 0, 0); vector-effect: non-scaling-stroke; stroke-width: 10px;"></path><defs><filter id="glow"><feGaussianBlur class="blur" stdDeviation="4.5" result="coloredBlur"></feGaussianBlur><feMerge><feMergeNode in="coloredBlur"></feMergeNode><feMergeNode in="SourceGraphic"></feMergeNode></feMerge></filter></defs></g><g class="callout-line"><path style="stroke-width: 1px; stroke: rgb(51, 51, 51);" d="M -4.3000030517578125,33.692987076294685 Q -11.528636121376582,23.257503668943002 -7.517429237266498,11.21330716883698"></path></g></svg><div class="marker-text label label-style-box label-style-box-rounded" style="text-align: center; color: rgb(29, 129, 162); font-size: 14px; text-shadow: none; background-color: white; left: -4.3px; top: 8px;">ZBS Alberite   |   314</div></div></div></div><div class="mapboxgl-control-container"><div class="mapboxgl-ctrl-top-left"></div><div class="mapboxgl-ctrl-top-right"></div><div class="mapboxgl-ctrl-bottom-left"><div class="mapboxgl-ctrl" style="display: none;"><a class="mapboxgl-ctrl-logo" target="_blank" href="https://www.mapbox.com/" aria-label="Mapbox logo" rel="noopener"></a></div></div><div class="mapboxgl-ctrl-bottom-right"><div class="mapboxgl-ctrl mapboxgl-ctrl-attrib mapboxgl-attrib-empty"></div></div></div><div id="minimap-container" style="height: 0px;"></div></div><div id="mapkey"></div><div id="mini-invis-container" style="visibility: hidden; left: -100000000px; position: absolute;"></div></div>
+
+                        <div class="dw-chart-notes ">
+                Casos fuera de La Rioja y otros: 46
+            </div>
+            
+    
+    
+            <div class="dw-chart-footer" id="footer">
+            <div class="footer-left">
+                
+                                    
+                                                <span class="footer-block byline-block hidden">
+                            <span class="byline-caption">
+                            Mapa:
+                            </span>
+
+                            <span class="chart-byline"></span>
+
+                            <span class="byline-append"></span>
+                        </span>
+                        
+
+                                                <span class="footer-block source-block ">
+                                                        <span class="separator"></span>
+                            <span class="source-caption">Fuente:</span>
+                            <a href="https://web.larioja.org/" rel="nofollow noopener noreferrer" target="_blank">Gobierno de La Rioja</a>
+                        </span>
+                        
+                        
+
+                                                
+                                                
+                                                
+                                                                        <span class="footer-block attribution">
+                            <span class="separator"></span>
+                            <a href="https://www.datawrapper.de/_/jZusx/" target="_blank">Creado con  Datawrapper</a>
+                        </span>
+                        
+                                                                        </div>
+            <div class="footer-right">
+                
+                            </div>
+        </div>
+    
+                
+
+    
+    <script type="text/javascript">
+    setTimeout(function() {
+        var img = document.createElement('img');
+        img.setAttribute('width', 1);
+        img.setAttribute('height', 1);
+        img.style.float = "right";
+        img.setAttribute('src', '//stats.datawrapper.de/jZusx/datawrapper.gif?r='+escape(document.referrer || ''));
+        document.body.appendChild(img);
+    },10);
+</script>
+
+
+
+    <script type="text/javascript" charset="utf-8">
+
+    (function() {
+
+        /*!  */
+var render=function(){"use strict";function e(e){return function(t){var n=t.toLowerCase().match(e);return!!n&&parseInt(n[1],10)}}var t={chrome:e(/chrom(?:e|ium)\/([0-9]+)\./),firefox:e(/firefox\/([0-9]+\.*[0-9]*)/),safari:e(/version\/([0-9]+).[0-9]+.[0-9]+ safari/),ie:e(/(?:msie |rv:)([0-9]+).[0-9]+/),edge:e(/edge\/([0-9]+).[0-9]+.[0-9]+/)};var n,i=(function(e){!function(){function t(e,t){document.addEventListener?e.addEventListener("scroll",t,!1):e.attachEvent("scroll",t)}function n(e){this.a=document.createElement("div"),this.a.setAttribute("aria-hidden","true"),this.a.appendChild(document.createTextNode(e)),this.b=document.createElement("span"),this.c=document.createElement("span"),this.h=document.createElement("span"),this.f=document.createElement("span"),this.g=-1,this.b.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.c.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.f.style.cssText="max-width:none;display:inline-block;position:absolute;height:100%;width:100%;overflow:scroll;font-size:16px;",this.h.style.cssText="display:inline-block;width:200%;height:200%;font-size:16px;max-width:none;",this.b.appendChild(this.h),this.c.appendChild(this.f),this.a.appendChild(this.b),this.a.appendChild(this.c)}function i(e,t){e.a.style.cssText="max-width:none;min-width:20px;min-height:20px;display:inline-block;overflow:hidden;position:absolute;width:auto;margin:0;padding:0;top:-999px;white-space:nowrap;font-synthesis:none;font:"+t+";"}function o(e){var t=e.a.offsetWidth,n=t+100;return e.f.style.width=n+"px",e.c.scrollLeft=n,e.b.scrollLeft=e.b.scrollWidth+100,e.g!==t&&(e.g=t,!0)}function r(e,n){function i(){var e=r;o(e)&&e.a.parentNode&&n(e.g)}var r=e;t(e.b,i),t(e.c,i),o(e)}function a(e,t){var n=t||{};this.family=e,this.style=n.style||"normal",this.weight=n.weight||"normal",this.stretch=n.stretch||"normal"}var s=null,d=null,c=null,l=null;function h(){return null===l&&(l=!!document.fonts),l}function f(e,t){return[e.style,e.weight,function(){if(null===c){var e=document.createElement("div");try{e.style.font="condensed 100px sans-serif"}catch(e){}c=""!==e.style.font}return c}()?e.stretch:"","100px",t].join(" ")}a.prototype.load=function(e,t){var o=this,a=e||"BESbswy",c=0,l=t||3e3,u=(new Date).getTime();return new Promise(function(e,t){if(h()&&!function(){if(null===d)if(h()&&/Apple/.test(window.navigator.vendor)){var e=/AppleWebKit\/([0-9]+)(?:\.([0-9]+))(?:\.([0-9]+))/.exec(window.navigator.userAgent);d=!!e&&603>parseInt(e[1],10)}else d=!1;return d}()){var p=new Promise(function(e,t){!function n(){(new Date).getTime()-u>=l?t(Error(l+"ms timeout exceeded")):document.fonts.load(f(o,'"'+o.family+'"'),a).then(function(t){1<=t.length?e():setTimeout(n,25)},t)}()}),m=new Promise(function(e,t){c=setTimeout(function(){t(Error(l+"ms timeout exceeded"))},l)});Promise.race([m,p]).then(function(){clearTimeout(c),e(o)},t)}else!function(e){document.body?e():document.addEventListener?document.addEventListener("DOMContentLoaded",function t(){document.removeEventListener("DOMContentLoaded",t),e()}):document.attachEvent("onreadystatechange",function t(){"interactive"!=document.readyState&&"complete"!=document.readyState||(document.detachEvent("onreadystatechange",t),e())})}(function(){function d(){var t;(t=-1!=w&&-1!=v||-1!=w&&-1!=g||-1!=v&&-1!=g)&&((t=w!=v&&w!=g&&v!=g)||(null===s&&(t=/AppleWebKit\/([0-9]+)(?:\.([0-9]+))/.exec(window.navigator.userAgent),s=!!t&&(536>parseInt(t[1],10)||536===parseInt(t[1],10)&&11>=parseInt(t[2],10))),t=s&&(w==y&&v==y&&g==y||w==x&&v==x&&g==x||w==b&&v==b&&g==b)),t=!t),t&&(E.parentNode&&E.parentNode.removeChild(E),clearTimeout(c),e(o))}var h=new n(a),p=new n(a),m=new n(a),w=-1,v=-1,g=-1,y=-1,x=-1,b=-1,E=document.createElement("div");E.dir="ltr",i(h,f(o,"sans-serif")),i(p,f(o,"serif")),i(m,f(o,"monospace")),E.appendChild(h.a),E.appendChild(p.a),E.appendChild(m.a),document.body.appendChild(E),y=h.a.offsetWidth,x=p.a.offsetWidth,b=m.a.offsetWidth,function e(){if((new Date).getTime()-u>=l)E.parentNode&&E.parentNode.removeChild(E),t(Error(l+"ms timeout exceeded"));else{var n=document.hidden;!0!==n&&void 0!==n||(w=h.a.offsetWidth,v=p.a.offsetWidth,g=m.a.offsetWidth,d()),c=setTimeout(e,50)}}(),r(h,function(e){w=e,d()}),i(h,f(o,'"'+o.family+'",sans-serif')),r(p,function(e){v=e,d()}),i(p,f(o,'"'+o.family+'",serif')),r(m,function(e){g=e,d()}),i(m,f(o,'"'+o.family+'",monospace'))})})},e.exports=a}()}(n={exports:{}},n.exports),n.exports);return function(e){var n=e.visJSON,o=e.chartJSON,r=e.chartData,a=e.isPreview,s=e.chartLocale,d=e.metricPrefix,c=e.themeId,l=e.templateJS,h=e.fontsJSON,f=e.typographyJSON,u=e.locales,p=e.assetDomain;window.visJSON=n;var m,w,v,g,y,x,b,E,N={firefox:[30,51],chrome:[20,54],ie:[6,11],edge:[12,18],safari:[6,12]},S=(m=navigator.userAgent,w="undefined"!=typeof InstallTrigger,v=/constructor/i.test(window.HTMLElement)||"[object SafariRemoteNotification]"===(!window.safari||window.safari.pushNotification).toString(),g=!!document.documentMode,y=!g&&!!window.StyleMedia,x=!!window.chrome&&!!window.chrome.loadTimes,b=/; wv/.test(m)&&/Chrome/.test(m),{browser:E=x||b?"chrome":w?"firefox":v?"safari":g?"ie":!!y&&"edge",version:!(!E||!t[E])&&t[E](m)}),T=document.createElement("script");if(T.type="text/javascript",T.async=!0,T.onload=C,T.onerror=C,S.browser&&N[S.browser]&&S.version>=N[S.browser][0]){if(S.version>N[S.browser][1])return C();T.src="https://"+p+"/assets/polyfills/"+S.browser+"-"+S.version+".js"}else T.src="https://"+p+"/assets/polyfills/all.js";function C(){__dw.init(Object.assign({visJSON:n,chartJSON:o,data:r,preview:a,chartLocale:s,locales:u,themeId:c,visId:o.type,lang:s.substr(0,2),metricPrefix:d},window.__dwParams||{})),function(e,t){var n=Array.isArray(e)?[]:Object.keys(e),o=new Set(n);Object.keys(t).forEach(function(e){var n=t[e].typeface;n&&n.split(",").map(function(e){return e.trim()}).forEach(function(e){return o.add(e)})});var r=[];return o.forEach(function(e){var t=new i(e);r.push(t.load(null,5e3))}),Promise.all(r)}(h,f).then(function(){return __dw.render()}).catch(function(){}),/iP(hone|od|ad)/.test(navigator.platform)&&(window.onload=__dw.render());var e=!1,t=n.id,p=dw.theme(c);p&&t&&("d3-pies"===t||"d3-donuts"===t||"d3-multiple-pies"===t||"d3-multiple-donuts"===t)&&(e=function(e,t,n){if(void 0===t&&(t=null),void 0===n&&(n=null),!t)return e;for(var i=t.split("."),o=e,r=0;r<i.length&&null!==o&&void 0!==o;r++)o=o[i[r]];return void 0===o||null===o?n:o}(p,"vis.d3-pies.fitchart",0));var m="1"===new URLSearchParams(window.location.search).get("fitchart")||1===e||!0===e;setInterval(function(){var e,t;if("fixed"!==n.height||m){if(__dw.params.preview||!__dw.vis.chart().get("metadata.publish.chart-height"))return;t=dw.utils.getNonChartHeight()+__dw.vis.chart().get("metadata.publish.chart-height")}else t=$("html").outerHeight(!0);window.parent.postMessage({"datawrapper-height":(e={},e[o.id]=t,e)},"*"),window.parent.postMessage({sentinel:"amp",type:"embed-size",height:t},"*"),window.parent.postMessage(JSON.stringify({src:window.location.toString(),context:"iframe.resize",height:t}),"*")},1e3),"function"==typeof l&&l()}document.getElementsByTagName("head")[0].appendChild(T)}}();
+
+        render({
+            visJSON: {"id":"locator-map","title":"Locator maps","height":"fixed","namespace":"edit","caption":"map","svelte-workflow":"locator-map","less":"\/var\/www\/datawrapper\/plugins\/locator-maps\/static\/locator-map.less","libraries":[{"local":"vendor\/mapbox-gl.min.js","cdn":"\/\/%asset_domain%\/assets\/mapboxgl\/mapbox-gl.min.js"}],"axes":[],"svelte-controls":true,"svelte-editor":{"module":"svelte\/locator-maps\/controls","id":"locator-map-controls"},"steps":[{"id":"markers"},{"id":"design"},{"id":"annotate"},{"id":"publish"}],"json-data":true,"default-data":"{\"markers\": []}","__static_path":"assets\/plugins\/locator-maps\/","__static_path_fs":"..\/\/www\/static\/plugins\/locator-maps\/","__plugin":"locator-maps","version":"829aed99","workflow":[{"id":"upload","title":"Upload Data"},{"id":"describe","title":"Check & Describe"},{"id":"visualize","title":"Visualize"},{"id":"publish","title":"Publish & Embed"}],"locale":[]},
+            chartJSON: {"id":"jZusx","title":"Mapa","theme":"datawrapper-data","createdAt":"2020-04-13 16:51:50","lastModifiedAt":"2020-04-22 10:17:36","type":"locator-map","metadata":{"data":{"transpose":false,"vertical-header":true,"horizontal-header":true,"json":true},"visualize":{"highlighted-series":[],"highlighted-values":[],"key":{"items":[],"style":"grid","title":"","enabled":false,"position":"bottom","columnWidth":200},"view":{"bbox":[[-3.51866497044216,41.87808798588995],[-1.4327623802809055,42.69592145037805]],"zoom":7.66,"pitch":0,"center":[-2.4757136753626128,42.288331932329015],"height":53,"bearing":0},"scale":false,"style":"dw-light","locked":false,"compass":false,"markers":[],"miniMap":{"opt":"globe","size":165,"color":"#ffffff","label":"","bounds":{"id":-1,"name":"","label":"","localname":"","admin_level":100},"enabled":false,"position":"bottom-right"},"mapLabel":false,"_last_tab":"publish","highlight":{"color":"#ffffff","region":{"bbox":"{\"type\":\"Polygon\",\"coordinates\":[[[-3.13427141425476,41.9190339801325],[-3.13427141425476,42.6442646573568],[-1.67870154127917,42.6442646573568],[-1.67870154127917,41.9190339801325],[-3.13427141425476,41.9190339801325]]]}","name":"La Rioja","bbox2":[-3.13427141425476,41.9190339801325,-1.67870154127917,42.6442646573568],"label":"Rioja","level":0,"osm_id":348991,"name_de":"","name_en":"Rioja","min_zoom":4,"land_area":"","parent_id":1311341,"admin_level":4},"stroke":"#00834b","enabled":true},"scaleUnit":"metric","visibility":{"green":true,"roads":true,"urban":true,"water":true,"building":false,"mountains":true,"building3d":false,"boundary_state":true,"boundary_country":false},"searchPlace":"","defaultMapSize":600,"maxMountainsPitch":20},"describe":{"source-name":"Gobierno de La Rioja","source-url":"https:\/\/web.larioja.org\/","number-format":"-","number-divisor":0,"number-append":"","number-prepend":"","intro":"Casos COVID-19 confirmados por prueba PCR. Datos actualizados el 22 de abril de 2020.","byline":"","hide-title":true},"publish":{"embed-width":600,"embed-height":402,"embed-codes":{"embed-method-iframe":"<iframe title=\"Mapa\" aria-label=\"Locator maps\" src=\"\/\/datawrapper.dwcdn.net\/jZusx\/19\/\" scrolling=\"no\" frameborder=\"0\" style=\"border: none;\" width=\"600\" height=\"402\"><\/iframe>","embed-method-responsive":"<iframe title=\"Mapa\" aria-label=\"Locator maps\" id=\"datawrapper-chart-jZusx\" src=\"\/\/datawrapper.dwcdn.net\/jZusx\/19\/\" scrolling=\"no\" frameborder=\"0\" style=\"width: 0; min-width: 100% !important; border: none;\" height=\"402\"><\/iframe><script type=\"text\/javascript\">!function(){\"use strict\";window.addEventListener(\"message\",function(a){if(void 0!==a.data[\"datawrapper-height\"])for(var e in a.data[\"datawrapper-height\"]){var t=document.getElementById(\"datawrapper-chart-\"+e)||document.querySelector(\"iframe[src*='\"+e+\"']\");t&&(t.style.height=a.data[\"datawrapper-height\"][e]+\"px\")}})}();\n<\/script>"},"embed-heights":{"100":535,"200":453,"300":419,"400":419,"500":419,"700":402,"800":402,"900":402,"1000":402}},"annotate":{"notes":"Casos fuera de La Rioja y otros: 46"},"json_error":null},"authorId":215233,"showInGallery":false,"language":"es-ES","guestSession":null,"lastEditStep":5,"publishedAt":"2020-04-22 10:17:41","publicUrl":"\/\/datawrapper.dwcdn.net\/jZusx\/19\/","publicVersion":19,"organizationId":null,"forkedFrom":null,"externalData":null,"forkable":false,"isFork":false,"inFolder":null,"utf8":false,"author":{"id":215233,"email":"web@larioja.org","name":null,"website":null,"socialmedia":null,"isLoggedIn":true,"isGuest":false,"isActivated":true,"isAdmin":false}},
+            chartData: "{\"markers\":[{\"id\":\"m12\",\"wikidata\":\"Q1623553\",\"type\":\"point\",\"title\":\"ZBS Alberite   |   314\",\"icon\":{\"id\":\"hospital\",\"path\":\"M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z\",\"horiz-adv-x\":750,\"height\":700,\"width\":750},\"scale\":1,\"textPosition\":null,\"markerColor\":\"#c71e1d\",\"markerSymbol\":\"\",\"markerTextColor\":\"#333333\",\"anchor\":\"bottom-center\",\"offsetY\":-7,\"offsetX\":69,\"labelStyle\":\"box-rounded\",\"text\":{\"bold\":false,\"italic\":false,\"uppercase\":false,\"space\":false,\"color\":\"#1d81a2\",\"fontSize\":14,\"halo\":\"#f2f3f0\"},\"class\":\"\",\"rotate\":0,\"visible\":true,\"locked\":false,\"preset\":\"-\",\"visibility\":{\"mobile\":true,\"desktop\":true},\"tooltip\":{\"enabled\":false,\"text\":\"\"},\"connectorLine\":{\"enabled\":true,\"arrowHead\":false,\"type\":\"curveRight\",\"targetPadding\":3,\"stroke\":1,\"lineLength\":30.495526157222088},\"coordinates\":[-2.447600185679107,42.40008976751656],\"orgLatLng\":[-2.4736796,42.3560509]},{\"id\":\"m11\",\"wikidata\":\"Q642083\",\"type\":\"point\",\"title\":\"ZBS Arnedo   |   96\",\"icon\":{\"id\":\"hospital\",\"path\":\"M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z\",\"horiz-adv-x\":750,\"height\":700,\"width\":750},\"scale\":1,\"textPosition\":null,\"markerColor\":\"#c71e1d\",\"markerSymbol\":\"\",\"markerTextColor\":\"#333333\",\"anchor\":\"bottom-center\",\"offsetY\":-6,\"offsetX\":-32,\"labelStyle\":\"box-rounded\",\"text\":{\"bold\":false,\"italic\":false,\"uppercase\":false,\"space\":false,\"color\":\"#1d81a2\",\"fontSize\":14,\"halo\":\"#f2f3f0\"},\"class\":\"\",\"rotate\":0,\"visible\":true,\"locked\":false,\"preset\":\"-\",\"visibility\":{\"mobile\":true,\"desktop\":true},\"tooltip\":{\"enabled\":false,\"text\":\"\"},\"connectorLine\":{\"enabled\":true,\"arrowHead\":false,\"type\":\"curveRight\",\"targetPadding\":3,\"stroke\":1,\"lineLength\":21.222522511438534},\"coordinates\":[-2.0995697,42.2273401],\"orgLatLng\":[-2.0995697,42.2273401]},{\"id\":\"m10\",\"wikidata\":\"Q1637356\",\"type\":\"point\",\"title\":\"ZBS Torrecilla   |  9\",\"icon\":{\"id\":\"hospital\",\"path\":\"M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z\",\"horiz-adv-x\":750,\"height\":700,\"width\":750},\"scale\":1,\"textPosition\":null,\"markerColor\":\"#c71e1d\",\"markerSymbol\":\"\",\"markerTextColor\":\"#333333\",\"anchor\":\"bottom-center\",\"offsetY\":6,\"offsetX\":-60,\"labelStyle\":\"box-rounded\",\"text\":{\"bold\":false,\"italic\":false,\"uppercase\":false,\"space\":false,\"color\":\"#1d81a2\",\"fontSize\":14,\"halo\":\"#f2f3f0\"},\"class\":\"\",\"rotate\":0,\"visible\":true,\"locked\":false,\"preset\":\"-\",\"visibility\":{\"mobile\":true,\"desktop\":true},\"tooltip\":{\"enabled\":false,\"text\":\"\"},\"connectorLine\":{\"enabled\":true,\"arrowHead\":false,\"type\":\"curveRight\",\"targetPadding\":3,\"stroke\":1,\"lineLength\":46.032385948953085},\"coordinates\":[-2.6305716,42.2560793],\"orgLatLng\":[-2.6305716,42.2560793]},{\"id\":\"m9\",\"wikidata\":\"Q1645908\",\"type\":\"point\",\"title\":\"ZBS San Rom\u00e1n   |   1\",\"icon\":{\"id\":\"hospital\",\"path\":\"M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z\",\"horiz-adv-x\":750,\"height\":700,\"width\":750},\"scale\":1,\"textPosition\":null,\"markerColor\":\"#c71e1d\",\"markerSymbol\":\"\",\"markerTextColor\":\"#333333\",\"anchor\":\"bottom-center\",\"offsetY\":39,\"offsetX\":4,\"labelStyle\":\"box-rounded\",\"text\":{\"bold\":false,\"italic\":false,\"uppercase\":false,\"space\":false,\"color\":\"#1d81a2\",\"fontSize\":14,\"halo\":\"#f2f3f0\"},\"class\":\"\",\"rotate\":0,\"visible\":true,\"locked\":false,\"preset\":\"-\",\"visibility\":{\"mobile\":true,\"desktop\":true},\"tooltip\":{\"enabled\":false,\"text\":\"\"},\"connectorLine\":{\"enabled\":true,\"arrowHead\":false,\"type\":\"curveRight\",\"targetPadding\":3,\"stroke\":1,\"lineLength\":51},\"coordinates\":[-2.4737,42.23199],\"orgLatLng\":[-2.4737,42.23199]},{\"id\":\"m8\",\"wikidata\":\"Q1626960\",\"type\":\"point\",\"title\":\"ZBS Cervera   |   22\",\"icon\":{\"id\":\"hospital\",\"path\":\"M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z\",\"horiz-adv-x\":750,\"height\":700,\"width\":750},\"scale\":1,\"textPosition\":null,\"markerColor\":\"#c71e1d\",\"markerSymbol\":\"\",\"markerTextColor\":\"#333333\",\"anchor\":\"bottom-center\",\"offsetY\":-66,\"offsetX\":77,\"labelStyle\":\"box-rounded\",\"text\":{\"bold\":false,\"italic\":false,\"uppercase\":false,\"space\":false,\"color\":\"#1d81a2\",\"fontSize\":14,\"halo\":\"#f2f3f0\"},\"class\":\"\",\"rotate\":0,\"visible\":true,\"locked\":false,\"preset\":\"-\",\"visibility\":{\"mobile\":true,\"desktop\":true},\"tooltip\":{\"enabled\":false,\"text\":\"\"},\"connectorLine\":{\"enabled\":true,\"arrowHead\":false,\"type\":\"curveRight\",\"targetPadding\":3,\"stroke\":1,\"lineLength\":57.06305086977819},\"coordinates\":[-1.9554794,42.0058319],\"orgLatLng\":[-1.9554794,42.0058319]},{\"id\":\"m7\",\"wikidata\":\"Q695889\",\"type\":\"point\",\"title\":\"ZBS Alfaro   |   123\",\"icon\":{\"id\":\"hospital\",\"path\":\"M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z\",\"horiz-adv-x\":750,\"height\":700,\"width\":750},\"scale\":1,\"textPosition\":null,\"markerColor\":\"#c71e1d\",\"markerSymbol\":\"\",\"markerTextColor\":\"#333333\",\"anchor\":\"bottom-center\",\"offsetY\":-89,\"offsetX\":-5,\"labelStyle\":\"box-rounded\",\"text\":{\"bold\":false,\"italic\":false,\"uppercase\":false,\"space\":false,\"color\":\"#1d81a2\",\"fontSize\":14,\"halo\":\"#f2f3f0\"},\"class\":\"\",\"rotate\":0,\"visible\":true,\"locked\":false,\"preset\":\"-\",\"visibility\":{\"mobile\":true,\"desktop\":true},\"tooltip\":{\"enabled\":false,\"text\":\"\"},\"connectorLine\":{\"enabled\":true,\"arrowHead\":false,\"type\":\"curveRight\",\"targetPadding\":3,\"stroke\":1,\"lineLength\":32.19999694824219},\"coordinates\":[-1.7492454,42.1785741],\"orgLatLng\":[-1.7492454,42.1785741]},{\"id\":\"m6\",\"wikidata\":\"Q558147\",\"type\":\"point\",\"title\":\"ZBS Calahorra   |   355\",\"icon\":{\"id\":\"hospital\",\"path\":\"M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z\",\"horiz-adv-x\":750,\"height\":700,\"width\":750},\"scale\":1,\"textPosition\":null,\"markerColor\":\"#c71e1d\",\"markerSymbol\":\"\",\"markerTextColor\":\"#333333\",\"anchor\":\"bottom-center\",\"offsetY\":-93,\"offsetX\":7,\"labelStyle\":\"box-rounded\",\"text\":{\"bold\":false,\"italic\":false,\"uppercase\":false,\"space\":false,\"color\":\"#1d81a2\",\"fontSize\":14,\"halo\":\"#f2f3f0\"},\"class\":\"\",\"rotate\":0,\"visible\":true,\"locked\":false,\"preset\":\"-\",\"visibility\":{\"mobile\":true,\"desktop\":true},\"tooltip\":{\"enabled\":false,\"text\":\"\"},\"connectorLine\":{\"enabled\":true,\"arrowHead\":false,\"type\":\"curveRight\",\"targetPadding\":3,\"stroke\":1,\"lineLength\":36.19999694824219},\"coordinates\":[-1.9648758,42.3035212],\"orgLatLng\":[-1.9648758,42.3035212]},{\"id\":\"m5\",\"wikidata\":\"Q1636221\",\"type\":\"point\",\"title\":\"ZBS Murillo   |   33\",\"icon\":{\"id\":\"hospital\",\"path\":\"M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z\",\"horiz-adv-x\":750,\"height\":700,\"width\":750},\"scale\":1,\"textPosition\":null,\"markerColor\":\"#c71e1d\",\"markerSymbol\":\"\",\"markerTextColor\":\"#333333\",\"anchor\":\"bottom-center\",\"offsetY\":-87,\"offsetX\":121,\"labelStyle\":\"box-rounded\",\"text\":{\"bold\":false,\"italic\":false,\"uppercase\":false,\"space\":false,\"color\":\"#1d81a2\",\"fontSize\":14,\"halo\":\"#f2f3f0\"},\"class\":\"\",\"rotate\":0,\"visible\":true,\"locked\":false,\"preset\":\"-\",\"visibility\":{\"mobile\":true,\"desktop\":true},\"tooltip\":{\"enabled\":false,\"text\":\"\"},\"connectorLine\":{\"enabled\":true,\"arrowHead\":false,\"type\":\"curveRight\",\"targetPadding\":3,\"stroke\":1,\"lineLength\":101.75614337676465},\"coordinates\":[-2.3246959,42.4028997],\"orgLatLng\":[-2.3246959,42.4028997]},{\"id\":\"m4\",\"wikidata\":\"Q405292\",\"type\":\"point\",\"title\":\"ZBS Haro   |  374\",\"icon\":{\"id\":\"hospital\",\"path\":\"M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z\",\"horiz-adv-x\":750,\"height\":700,\"width\":750},\"scale\":1,\"textPosition\":null,\"markerColor\":\"#c71e1d\",\"markerSymbol\":\"\",\"markerTextColor\":\"#333333\",\"anchor\":\"bottom-center\",\"offsetY\":-48,\"offsetX\":-80,\"labelStyle\":\"box-rounded\",\"text\":{\"bold\":false,\"italic\":false,\"uppercase\":false,\"space\":false,\"color\":\"#1d81a2\",\"fontSize\":14,\"halo\":\"#f2f3f0\"},\"class\":\"\",\"rotate\":0,\"visible\":true,\"locked\":false,\"preset\":\"-\",\"visibility\":{\"mobile\":true,\"desktop\":true},\"tooltip\":{\"enabled\":false,\"text\":\"\"},\"connectorLine\":{\"enabled\":true,\"arrowHead\":false,\"type\":\"curveRight\",\"targetPadding\":3,\"stroke\":1,\"lineLength\":29.284792654428287},\"coordinates\":[-2.8466768,42.5768922],\"orgLatLng\":[-2.8466768,42.5768922]},{\"id\":\"m3\",\"wikidata\":\"Q646564\",\"type\":\"point\",\"title\":\"ZBS Santo Domingo   |   474\",\"icon\":{\"id\":\"hospital\",\"path\":\"M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z\",\"horiz-adv-x\":750,\"height\":700,\"width\":750},\"scale\":1,\"textPosition\":null,\"markerColor\":\"#c71e1d\",\"markerSymbol\":\"\",\"markerTextColor\":\"#333333\",\"anchor\":\"bottom-center\",\"offsetY\":50,\"offsetX\":0,\"labelStyle\":\"box-rounded\",\"text\":{\"bold\":false,\"italic\":false,\"uppercase\":false,\"space\":false,\"color\":\"#1d81a2\",\"fontSize\":14,\"halo\":\"#f2f3f0\"},\"class\":\"\",\"rotate\":0,\"visible\":true,\"locked\":false,\"preset\":\"-\",\"visibility\":{\"mobile\":true,\"desktop\":true},\"tooltip\":{\"enabled\":false,\"text\":\"\"},\"connectorLine\":{\"enabled\":true,\"arrowHead\":false,\"type\":\"curveRight\",\"targetPadding\":3,\"stroke\":1,\"lineLength\":62},\"coordinates\":[-2.9536395,42.4406711],\"orgLatLng\":[-2.9536395,42.4406711]},{\"id\":\"m2\",\"wikidata\":\"Q776113\",\"type\":\"point\",\"title\":\"ZBS N\u00e1jera   |   208\",\"icon\":{\"id\":\"hospital\",\"path\":\"M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z\",\"horiz-adv-x\":750,\"height\":700,\"width\":750},\"scale\":1,\"textPosition\":null,\"markerColor\":\"#c71e1d\",\"markerSymbol\":\"\",\"markerTextColor\":\"#333333\",\"anchor\":\"bottom-center\",\"offsetY\":-74,\"offsetX\":-22,\"labelStyle\":\"box-rounded\",\"text\":{\"bold\":false,\"italic\":false,\"uppercase\":false,\"space\":false,\"color\":\"#1d81a2\",\"fontSize\":14,\"halo\":\"#f2f3f0\"},\"class\":\"\",\"rotate\":0,\"visible\":true,\"locked\":false,\"preset\":\"-\",\"visibility\":{\"mobile\":true,\"desktop\":true},\"tooltip\":{\"enabled\":false,\"text\":\"\"},\"connectorLine\":{\"enabled\":true,\"arrowHead\":false,\"type\":\"curveRight\",\"targetPadding\":3,\"stroke\":1,\"lineLength\":17.199996948242188},\"coordinates\":[-2.7336874,42.416745],\"orgLatLng\":[-2.7336874,42.416745]},{\"id\":\"m1\",\"wikidata\":\"Q916230\",\"type\":\"point\",\"title\":\"ZBS Navarrete   |   92\",\"icon\":{\"id\":\"hospital\",\"path\":\"M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z\",\"horiz-adv-x\":750,\"height\":700,\"width\":750},\"scale\":1,\"textPosition\":null,\"markerColor\":\"#c71e1d\",\"markerSymbol\":\"\",\"markerTextColor\":\"#333333\",\"anchor\":\"bottom-center\",\"offsetY\":-9,\"offsetX\":-62,\"labelStyle\":\"box-rounded\",\"text\":{\"bold\":false,\"italic\":false,\"uppercase\":false,\"space\":false,\"color\":\"#1d81a2\",\"fontSize\":14,\"halo\":\"#f2f3f0\"},\"class\":\"\",\"rotate\":0,\"visible\":true,\"locked\":false,\"preset\":\"-\",\"visibility\":{\"mobile\":true,\"desktop\":true},\"tooltip\":{\"enabled\":false,\"text\":\"\"},\"connectorLine\":{\"enabled\":true,\"arrowHead\":false,\"type\":\"curveRight\",\"targetPadding\":3,\"stroke\":1,\"lineLength\":42.04220412105007},\"coordinates\":[-2.5616234,42.4289697],\"orgLatLng\":[-2.5616234,42.4289697]},{\"id\":\"m0\",\"wikidata\":\"Q14325\",\"type\":\"point\",\"title\":\"ZBS Logro\u00f1o   |  1.557\",\"icon\":{\"id\":\"hospital\",\"path\":\"M300 725c-28 0-50-22-50-50l0-200-200 0c-28 0-50-22-50-50l0-150c0-28 22-50 50-50l200 0 0-200c0-28 22-50 50-50l150 0c28 0 50 22 50 50l0 200 200 0c28 0 50 22 50 50l0 150c0 28-22 50-50 50l-200 0 0 200c0 28-22 50-50 50z\",\"horiz-adv-x\":750,\"height\":700,\"width\":750},\"scale\":1,\"textPosition\":null,\"markerColor\":\"#c71e1d\",\"markerSymbol\":\"\",\"markerTextColor\":\"#333333\",\"anchor\":\"bottom-center\",\"offsetY\":-100,\"offsetX\":19,\"labelStyle\":\"box-rounded\",\"text\":{\"bold\":false,\"italic\":false,\"uppercase\":false,\"space\":false,\"color\":\"#1d81a2\",\"fontSize\":14,\"halo\":\"#f2f3f0\"},\"class\":\"\",\"rotate\":0,\"visible\":true,\"locked\":false,\"preset\":\"-\",\"visibility\":{\"mobile\":true,\"desktop\":true},\"tooltip\":{\"enabled\":false,\"text\":\"\"},\"connectorLine\":{\"enabled\":true,\"arrowHead\":false,\"type\":\"curveRight\",\"targetPadding\":3,\"stroke\":1,\"lineLength\":43.19999694824219},\"coordinates\":[-2.4396676,42.4661196],\"orgLatLng\":[-2.4396676,42.4661196]}]}",
+            assetDomain: 'datawrapper.dwcdn.net',
+            isPreview: false,
+            chartLocale: 'es-ES',
+            locales: {},
+            metricPrefix: {"3":"k","6":"m","9":"b","12":"t"},
+            themeId: "datawrapper-data",
+            fontsJSON: {"Roboto":{"type":"font","import":"https:\/\/static.dwcdn.net\/css\/roboto.css","method":"import"}},
+            typographyJSON: {"chart":{"typeface":"Roboto,sans-serif","color":"#181818","fontSize":12},"headline":{"fontSize":22,"fontWeight":"bold","underlined":0,"cursive":0,"color":"#000000","typeface":"Roboto,sans-serif"},"description":{"fontSize":14,"lineHeight":17,"fontWeight":"normal","underlined":0,"cursive":0,"typeface":"Roboto,sans-serif"},"notes":{"fontSize":12,"fontWeight":"normal","underlined":0,"cursive":1,"color":"#656565","typeface":"Roboto,sans-serif"},"footer":{"color":"#888","fontSize":11,"fontWeight":"normal","underlined":0,"cursive":0,"typeface":"Roboto,sans-serif"},"links":{"color":"#18a1cd","fontWeight":"normal","underlined":0,"cursive":0,"typeface":"Roboto,sans-serif"}},
+            templateJS: false
+        });
+
+    })();
+
+    </script>
+
+
+
+<img style="float: right;" src="a_data_008/datawrapper.gif" width="1" height="1"></body></html>
