@@ -1,0 +1,63 @@
+/* CALENDARIO DATEPICKER */
+#calendario {
+    border: 1px solid #ccc;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    padding: 0.2em;
+}
+.datepicker-inline, .datepicker-inline table {
+    width: 100%;
+}
+.datepicker {
+}
+/* today */
+.datepicker .day.today {
+    background: #eee;
+    color: #538d1c;
+    font-weight: bold;
+}
+.datepicker .day.today:hover, .datepicker .day.today:focus {
+    background: #538d1c;
+    color: #fff;
+}
+/* active */
+.datepicker .day.active {
+    background: #faba00!important;
+    color: #fff!important;
+    font-weight: bold!important;
+}
+.datepicker .day.active:hover, .datepicker .day.active:focus {
+    background: #eee!important;
+    color: #000!important;
+}
+.datepicker .day.highlighted {
+    background: #eee;
+}
+.datepicker .day.highlighted:hover, .datepicker .day.highlighted:focus {
+    background: #ccc;
+}
+.datepicker .datepicker-switch {
+    text-transform: uppercase;
+    color: #6ab023;
+    font-size: 1.2em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+.datepicker .prev, .datepicker .next {
+    font-size: 1.4em;
+    color: #538d1c;
+}
+.datepicker th.today {
+    color: #538d1c;
+}
+.datepicker th.today:hover, .datepicker th.today:focus {
+    background: #6ab023;
+    color: #fff;
+}
+.datepicker th.dow {
+    background: #ddd;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
